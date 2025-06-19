@@ -44,8 +44,8 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   place-self: center;
-} 
- 
+}
+
 .res-card {
   width: 250px;
   height: 320px;
@@ -79,4 +79,19 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.shimmer-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.shimmer-card {
+  width: 250px;
+  height: 320px;
+  background-color: #f0f0f0;
+  margin: 20px;
 }
