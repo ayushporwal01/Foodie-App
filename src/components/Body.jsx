@@ -9,8 +9,6 @@ const Body = () => {
 
   const [searchText, setSearchText] = useState("");
 
-  console.log("Body Rendered");
-
   useEffect(() => {
     fetchData();
   }, []);

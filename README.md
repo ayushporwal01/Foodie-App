@@ -1,9 +1,9 @@
 # React + Vite
 
-/*
-* - Header
-*/
+/\*
 
+- - Header
+    \*/
 
 Two types Of Export/Import
 
@@ -12,13 +12,14 @@ Two types Of Export/Import
 export default Component;
 import Component from "path"
 
-- Named 
+- Named
 
 export const Component;
-import {Component} from "path"; 
-
+import {Component} from "path";
 
 # React Hooks
- (Normal JS utility functions)
+
+(Normal JS utility functions)
+
 - useState() - Superpowerful State Variables
-- useeffect()
+- useEffect() - Side-Effect Manager
