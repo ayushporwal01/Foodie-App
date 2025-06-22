@@ -23,3 +23,8 @@ import {Component} from "path";
 
 - useState() - Superpowerful State Variables
 - useEffect() - Side-Effect Manager
+
+
+# Routing  
+- Client Side Routing
+- Server Side Routing
