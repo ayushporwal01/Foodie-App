@@ -1,10 +1,5 @@
 # React + Vite
 
-/\*
-
-- - Header
-    \*/
-
 Two types Of Export/Import
 
 - Default
