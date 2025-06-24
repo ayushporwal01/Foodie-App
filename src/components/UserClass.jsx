@@ -26,17 +26,6 @@ class UserClass extends React.Component {
 
     return (
       <div className="user-card">
-        <h1>Count = {count}</h1>
-        <button
-          onClick={() => {
-            this.setState({
-              count: this.state.count + 1,
-              //count2: this.state.count2 + 1,
-            });
-          }}
-        >
-          Count Increase
-        </button>
         <h2>Name: {name}</h2>
         <h3>Location: {location}</h3>
         <h4>Contact: @ayushporwal1</h4>
@@ -46,15 +35,3 @@ class UserClass extends React.Component {
 }
 
 export default UserClass;
-
-
-/*
-Parent Constructor
-Parent Render
-  - Ayush LifeCycle
-  - Elon Did Mount
-
-  - Ayush Did Mount
-  - Elon LifeCycle
-Parent Did Mount
-*/ 
