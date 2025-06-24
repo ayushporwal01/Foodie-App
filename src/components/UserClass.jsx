@@ -6,6 +6,7 @@ class UserClass extends React.Component {
 
     this.state = {
       count: 0,
+      count2: 0
     };
   }
   render() {
@@ -18,6 +19,7 @@ class UserClass extends React.Component {
           onClick={() => {
             this.setState({
               count: this.state.count + 1,
+              count2: this.state.count2 + 1,
             });
           }}
         >
