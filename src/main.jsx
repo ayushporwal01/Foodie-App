@@ -1,4 +1,4 @@
-import { lazy, StrictMode } from "react";
+import { Suspense, lazy, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./App.jsx";
@@ -41,7 +41,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/grocery",
-        element: <Grocery />,
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <Grocery />
+          </Suspense>
+        ),
       },
     ],
     errorElement: <Error />,
