@@ -3,9 +3,9 @@
 # Vite
 - Bundling
 - Fast HMR(Hot Module Replacement)
-- Plugin Support
 - Code Splitting
 - Tree Shaking
+- Plugin Support
 
 
 # Foodie 
@@ -29,6 +29,7 @@ import Component from "path"
 
 export const Component;
 import {Component} from "path";
+
 
 # React Hooks
 
