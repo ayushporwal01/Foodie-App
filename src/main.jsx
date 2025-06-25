@@ -7,9 +7,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error.jsx";
 import RestaurantMenu from "./components/RestaurantMenu";
-import Grocery from "./components/Grocery.jsx";
 import "./style.css";
-
 
 //Chunking
 //Code Splitting
@@ -17,7 +15,6 @@ import "./style.css";
 //Lazy Loading
 //On-Demand Loading
 //Dynamic Import
-
 
 
 const appRouter = createBrowserRouter([
