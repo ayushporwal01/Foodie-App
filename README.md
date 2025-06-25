@@ -2,9 +2,10 @@
 
 # Vite
 - Bundling
-- Code Splitting
 - Fast HMR(Hot Module Replacement)
 - Plugin Support
+- Code Splitting
+
 
 # Foodie 
 
