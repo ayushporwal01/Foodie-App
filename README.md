@@ -9,6 +9,14 @@
 
 
 # Foodie 
+/**
+- Header
+- Body 
+- About 
+- Contact
+- Grocery
+- Cart
+**/
 
 Two types Of Export/Import
 
