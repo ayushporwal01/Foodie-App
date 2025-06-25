@@ -5,6 +5,7 @@
 - Fast HMR(Hot Module Replacement)
 - Plugin Support
 - Code Splitting
+- Tree Shaking
 
 
 # Foodie 
