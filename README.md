@@ -2,6 +2,7 @@
 
 # Vite
 - Bundling
+- Code Splitting
 
 # Foodie 
 
