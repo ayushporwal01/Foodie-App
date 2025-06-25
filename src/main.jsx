@@ -16,6 +16,7 @@ import "./style.css";
 //On-Demand Loading
 //Dynamic Import
 
+const Grocery = lazy(() => import("./components/Grocery.jsx"));
 
 const appRouter = createBrowserRouter([
   {
