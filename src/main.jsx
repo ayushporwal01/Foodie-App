@@ -10,6 +10,16 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import Grocery from "./components/Grocery.jsx";
 import "./style.css";
 
+
+//Chunking
+//Code Splitting
+//Dynamic Bundling
+//Lazy Loading
+//On-Demand Loading
+//Dynamic Import
+
+
+
 const appRouter = createBrowserRouter([
   {
     path: "/",
