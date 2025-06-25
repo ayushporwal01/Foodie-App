@@ -3,6 +3,7 @@
 # Vite
 - Bundling
 - Code Splitting
+- Fast HMR(Hot Module Replacement)
 
 # Foodie 
 
