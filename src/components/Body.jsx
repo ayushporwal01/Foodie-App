@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
-import useOnlineStatus from "../utils/useOnlineStatus";
+
 
 const Body = () => {
   //Local State Variable - Superpowerful React Variable
