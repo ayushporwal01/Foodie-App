@@ -39,7 +39,7 @@ const Body = () => {
       </h1>
     );
 
-
+  //Conditional Rendering
   return ListOfRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
