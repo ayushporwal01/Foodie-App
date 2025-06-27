@@ -68,18 +68,7 @@ const Body = () => {
             Search
           </button>
         </div>
-        <button
-          className="filter-btn h-8 px-4 bg-gray-500 text-white hover:bg-gray-600  transition-all ease-in cursor-pointer"
-          onClick={() => {
-            //Filter Logic for Top Rated Restaurants
-            const filteredList = ListOfRestaurants.filter(
-              (res) => res.info.avgRating > 4
-            );
-            setFilteredRestaurant(filteredList);
-          }}
-        >
-          Top Rated Restaurant
-        </button>
+       
       </div>
 
       <div className="res-container grid grid-cols-4 gap-10">
