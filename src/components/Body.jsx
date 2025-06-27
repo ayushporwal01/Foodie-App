@@ -43,19 +43,19 @@ const Body = () => {
   return ListOfRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
-      <div className="filter flex gap-5 m-5">
+    <div className="body flex flex-col justify-center items-center">
+      <div className="filter flex justify-center gap-5 m-5">
         <div className="search flex items-center">
           <input
             type="text"
-            className="search-box h-[31px] border border-r-0 pl-2"
+            className="search-box h-8 px-3 border border-r-0 pl-2"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
-            className="search-btn w-18 h-8 bg-gray-500 text-white hover:bg-gray-600  transition-all ease-in cursor-pointer"
+            className="search-btn h-8 px-4 bg-gray-500 text-white hover:bg-gray-600  transition-all ease-in cursor-pointer"
             onClick={() => {
               //filter the restaurant cards and update the UI
               const filteredRestaurant = ListOfRestaurants.filter((res) =>
@@ -69,7 +69,7 @@ const Body = () => {
           </button>
         </div>
         <button
-          className="filter-btn w-45 h-8 bg-gray-500 text-white hover:bg-gray-600  transition-all ease-in cursor-pointer"
+          className="filter-btn h-8 px-4 bg-gray-500 text-white hover:bg-gray-600  transition-all ease-in cursor-pointer"
           onClick={() => {
             //Filter Logic for Top Rated Restaurants
             const filteredList = ListOfRestaurants.filter(
@@ -82,7 +82,7 @@ const Body = () => {
         </button>
       </div>
 
-      <div className="res-container">
+      <div className="res-container grid grid-cols-4 gap-10">
         {filteredRestaurant?.map((restaurant) => (
           <Link
             key={restaurant.info.id}
