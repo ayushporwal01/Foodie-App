@@ -24,6 +24,8 @@ const Body = () => {
 
     const json = await data.json();
 
+    console.log(json);
+
     setListOfRestaurant(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -45,7 +47,7 @@ const Body = () => {
   return ListOfRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body flex flex-col justify-center items-center mt-24">
+    <div className="body flex flex-col justify-center items-center">
       <div className="filter flex justify-center gap-5 m-5">
         <div className="search flex items-center">
           <input
@@ -90,11 +92,13 @@ const Body = () => {
             key={restaurant.info.id}
             to={"/restaurants/" + restaurant.info.id}
           >
-            {restaurant.info.avgRating > 4.4 ? (
-              <RestaurantCardPromoted resData={restaurant} />
-            ) : (
-              <RestaurantCard resData={restaurant} />
-            )}
+            <div className="relative hover:scale-105 transition-transform duration-200 ease-in-out">
+              {restaurant.info.avgRating > 4.4 ? (
+                <RestaurantCardPromoted resData={restaurant} />
+              ) : (
+                <RestaurantCard resData={restaurant} />
+              )}
+            </div>
           </Link>
         ))}
       </div>

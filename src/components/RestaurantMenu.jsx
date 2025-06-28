@@ -6,6 +6,7 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
 
   const resInfo = useRestaurantMenu(resId);
+  console.log("resInfo", resInfo);
 
   if (resInfo === null) return <Shimmer />;
 
@@ -18,33 +19,20 @@ const RestaurantMenu = () => {
     resInfo?.cards?.find((card) => card?.groupedCard)?.groupedCard?.cardGroupMap
       ?.REGULAR?.cards || [];
 
-  const menuItemsCard = regularCards.find(
+  const menuItemsCard = regularCards.filter(
     (card) => card?.card?.card?.itemCards
   );
 
-  const itemCards = menuItemsCard?.card?.card?.itemCards || [];
+  const itemCards = menuItemsCard.flatMap(
+    (section) => section?.card?.card?.itemCards || []
+  );
 
   return (
-    <div>
+    <div className="text-center">
       <h1>{name}</h1>
       <p>
         {cuisines?.join(", ")} - {costForTwoMessage}
       </p>
-
-      <h2>Menu</h2>
-      {itemCards.length === 0 ? (
-        <p>No menu items found.</p>
-      ) : (
-        <ul>
-          {itemCards.map((item) => (
-            <li key={item?.card?.info?.id}>
-              {item?.card?.info?.name} - {" Rs."}
-              {item?.card?.info?.defaultPrice / 100 ||
-                item?.card?.info?.price / 100}
-            </li>
-          ))}
-        </ul>
-      )}
     </div>
   );
 };
