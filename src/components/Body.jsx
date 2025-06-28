@@ -11,8 +11,6 @@ const Body = () => {
 
   const [searchText, setSearchText] = useState("");
 
-  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
-
   useEffect(() => {
     fetchData();
   }, []);
