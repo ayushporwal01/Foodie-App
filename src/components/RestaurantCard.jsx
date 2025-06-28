@@ -7,7 +7,7 @@ const RestaurantCard = (props) => {
     resData?.info;
 
   return (
-    <div className="res-card w-70 border hover:scale-105 transition-all duration-200 ease-in-out">
+    <div className="res-card w-70 border">
       <img
         className="res-logo w-full h-52 object-cover object-center"
         src={CDN_URL + cloudinaryImageId}
@@ -21,6 +21,20 @@ const RestaurantCard = (props) => {
       </div>
     </div>
   );
+};
+
+//Higher Order Function - PromotedRestaurantCard
+export const withPromotedLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div className="relative hover:scale-105 transition-transform duration-200 ease-in-out">
+        <label className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 z-20 rounded shadow">
+          Promoted
+        </label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
 };
 
 export default RestaurantCard;
