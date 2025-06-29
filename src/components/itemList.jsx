@@ -4,7 +4,10 @@ const ItemsList = ({ items }) => {
   return (
     <div>
       {items.map((item) => (
-       
+        <div
+          key={item?.card?.info?.id}
+          className="m-2 p-2 border-b-2 border-gray-300 flex justify-between gap-20"
+        >
           <div className="text-left h-full">
             <div className="font-bold text-[18px] text-gray-700">
               {item?.card?.info?.name}
