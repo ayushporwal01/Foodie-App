@@ -27,14 +27,12 @@ const Body = () => {
 
       console.log(json);
 
-      setListOfRestaurant(
+      const restaurants =
         json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants
-      );
-      setFilteredRestaurant(
-        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants
-      );
+          ?.restaurants || [];
+
+      setListOfRestaurant(restaurants);
+      setFilteredRestaurant(restaurants);
     } catch (err) {
       console.error("Failed to fetch restaurants: ", err);
     }
