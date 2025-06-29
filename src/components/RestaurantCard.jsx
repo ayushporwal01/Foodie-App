@@ -27,7 +27,7 @@ const RestaurantCard = (props) => {
 export const withPromotedLabel = (RestaurantCard) => {
   return (props) => {
     return (
-      <div className="relative hover:scale-105 transition-transform duration-200 ease-in-out">
+      <div className="relative">
         <label className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 z-20 rounded shadow">
           Promoted
         </label>

@@ -18,20 +18,26 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=22.7195687&lng=75.8577258&carousel=true&third_party_vendor=1"
-    );
+    try {
+      const data = await fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=22.7195687&lng=75.8577258&carousel=true&third_party_vendor=1"
+      );
 
-    const json = await data.json();
+      const json = await data.json();
 
-    console.log(json);
+      console.log(json);
 
-    setListOfRestaurant(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-    setFilteredRestaurant(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+      setListOfRestaurant(
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
+      );
+      setFilteredRestaurant(
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
+      );
+    } catch (err) {
+      console.error("Failed to fetch restaurants: ", err);
+    }
   };
 
   const onlineStatus = useOnlineStatus();
@@ -44,9 +50,11 @@ const Body = () => {
     );
 
   //Conditional Rendering
-  return ListOfRestaurants?.length === 0 ? (
-    <Shimmer />
-  ) : (
+  if (ListOfRestaurants.length === 0) {
+    return <Shimmer />;
+  }
+
+  return (
     <div className="body flex flex-col justify-center items-center">
       <div className="filter flex justify-center gap-5 m-5">
         <div className="search flex items-center">
@@ -92,7 +100,7 @@ const Body = () => {
             key={restaurant.info.id}
             to={"/restaurants/" + restaurant.info.id}
           >
-            <div className="relative hover:scale-105 transition-transform duration-200 ease-in-out">
+            <div className="relative hover:scale-95 transition-transform duration-200 ease-in-out">
               {restaurant.info.avgRating > 4.4 ? (
                 <RestaurantCardPromoted resData={restaurant} />
               ) : (
