@@ -10,13 +10,16 @@ const ItemsList = ({ items }) => {
         >
           <div className="text-left h-full">
             <div className="font-bold text-[18px] text-gray-700">
+              {/* Name */}
               {item?.card?.info?.name}
+              {/* Price */}
               <p className="font-semibold text-[16px] text-black">
                 ₹
                 {(item?.card?.info?.defaultPrice ?? item?.card?.info?.price) /
                   100}
               </p>
             </div>
+            {/* Description */}
             <p className="line-clamp-2 text-gray-600">
               {item?.card?.info?.description}
             </p>
