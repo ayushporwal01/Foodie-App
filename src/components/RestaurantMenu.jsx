@@ -41,11 +41,12 @@ const RestaurantMenu = () => {
         {cuisines?.join(", ")} - {costForTwoMessage}
       </p>
       {/* category accordions */}
-      {categories.map((category) => (
+      {categories.map((category, index) => (
+        //Controlled Component
         <RestaurantCategory
           key={category?.card?.card?.title}
           data={category?.card?.card}
-          showItems={false}
+          showItems={index === 0 ? true : false}
         />
       ))}
     </div>

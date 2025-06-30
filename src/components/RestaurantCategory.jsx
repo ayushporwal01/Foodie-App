@@ -2,18 +2,12 @@ import { useState } from "react";
 import ItemsList from "./itemList";
 
 const RestaurantCategory = ({ data, showItems }) => {
-  // const [showItems, setShowItems] = useState(false);
-
-  // const handleClick = () => {
-  //   setShowItems(!showItems);
-  // };
-
   return (
     <div>
       {/* Accordion Header */}
       <div
         className="w-1/2 p-4 mx-auto my-4 bg-gray-200 shadow-lg select-none cursor-pointer"
-        onClick={handleClick}
+       
       >
         <div className="flex justify-between">
           <span className="text-lg font-bold">
