@@ -34,7 +34,10 @@ const ItemsList = ({ items }) => {
               alt={item?.card?.info?.name}
             />
             {/* ADD Button */}
-            <button className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-28 h-10 text-lg font-bold uppercase border border-gray-400 rounded-[8px] text-green-600 bg-white shadow-[0px_0px_2px_2px_rgba(0,0,0,0.1)]  hover:bg-gray-200 transition-all duration-200 ease-in-out cursor-pointer">
+            <button
+              className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-28 h-10 text-lg font-bold uppercase border border-gray-400 rounded-[8px] text-green-600 bg-white shadow-[0px_0px_2px_2px_rgba(0,0,0,0.1)]  hover:bg-gray-200 transition-all duration-200 ease-in-out cursor-pointer"
+              onClick={(e) => e.stopPropagation()}
+            >
               Add
             </button>
           </div>
