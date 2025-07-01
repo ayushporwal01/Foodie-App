@@ -12,11 +12,9 @@ function AppLayout() {
     setUsername(data.name);
   }, []);
   return (
-    <UserContext.Provider value={{ loggedInUser: username }}>
+    <UserContext.Provider value={{ loggedInUser: username, setUsername }}>
       <div className="app">
-        <UserContext.Provider value={{ loggedInUser: "Elon Musk" }}>
-          <Header />
-        </UserContext.Provider>
+        <Header />
         <main className="mt-24">
           <Outlet />
         </main>

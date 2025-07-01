@@ -3,10 +3,9 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./App.jsx";
 import Body from "./components/Body.jsx";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import Contact from "./components/Contact.jsx";
 import Error from "./components/Error.jsx";
-import RestaurantMenu from "./components/RestaurantMenu";
+import RestaurantMenu from "./components/RestaurantMenu.jsx";
 import "./style.css";
 
 //Chunking
@@ -18,6 +17,8 @@ import "./style.css";
 
 const Grocery = lazy(() => import("./components/Grocery.jsx"));
 
+const About = lazy(() => import("./components/About.jsx"));
+
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -28,21 +29,25 @@ const appRouter = createBrowserRouter([
         element: <Body />,
       },
       {
-        path: "/about",
-        element: <About />,
+        path: "/restaurants/:resId",
+        element: <RestaurantMenu />,
       },
       {
         path: "/contact",
         element: <Contact />,
       },
       {
-        path: "/restaurants/:resId",
-        element: <RestaurantMenu />,
+        path: "/about",
+        element: (
+          <Suspense fallback={<h1>About Loading...</h1>}>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "/grocery",
         element: (
-          <Suspense fallback={<h1>Loading...</h1>}>
+          <Suspense fallback={<h1>Grocery Loading...</h1>}>
             <Grocery />
           </Suspense>
         ),

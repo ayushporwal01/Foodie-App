@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   //Local State Variable - Superpowerful React Variable
@@ -10,6 +11,7 @@ const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
   const [searchText, setSearchText] = useState("");
+  const { loggedInUser, setUsername } = useContext(UserContext);
 
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
@@ -90,6 +92,15 @@ const Body = () => {
         >
           Top Rated Restaurant
         </button>
+        <div className="search flex items-center">
+          <label>UserName:</label>
+          <input
+            type="text"
+            className="search-box h-8 px-3 border pl-2"
+            value={loggedInUser}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
       </div>
 
       <div className="res-container grid grid-cols-4 gap-10">
