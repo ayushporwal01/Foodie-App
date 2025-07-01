@@ -4,7 +4,6 @@ import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
-import Theme from "./Theme";
 
 const Body = () => {
   //Local State Variable - Superpowerful React Variable
