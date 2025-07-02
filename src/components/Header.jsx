@@ -2,17 +2,15 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
-import { useTheme } from "../utils/ThemeContext";
 
 //Named Export
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
   const onlineStatus = useOnlineStatus();
   const { loggedInUser } = useContext(UserContext);
-  const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="header h-24 flex justify-between items-center border pr-13 fixed top-0 left-0 right-0 z-50 bg-white text-black dark:bg-black dark:text-white">
+    <div className="header h-24 flex justify-between items-center border pr-13 fixed top-0 left-0 right-0 z-50 bg-white ">
       <div className="logo-container">
         <img className="logo w-30" src="/food-logo.png" alt="Food Logo" />
       </div>

@@ -38,9 +38,11 @@ const RestaurantMenu = () => {
   console.log(categories);
 
   return (
-    <div className="text-center mt-30">
-      <h1 className="font-bold text-2xl my-6">{name}</h1>
-      <p className="font-semibold text-lg">
+    <div className="text-center pt-10 bg-white dark:bg-black">
+      <h1 className="font-bold text-2xl my-6 text-black dark:text-white">
+        {name}
+      </h1>
+      <p className="font-semibold text-lg text-black dark:text-white">
         {cuisines?.join(", ")} - {costForTwoMessage}
       </p>
       {/* category accordions */}

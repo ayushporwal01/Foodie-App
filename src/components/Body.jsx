@@ -44,7 +44,7 @@ const Body = () => {
 
   if (onlineStatus === false)
     return (
-      <h1 className="text-black dark:text-white">
+      <h1>
         "Oops! Looks like you're offline. Check your internet connection."
       </h1>
     );
@@ -55,7 +55,7 @@ const Body = () => {
   }
 
   return (
-    <div className="body flex flex-col justify-center items-center bg-white text-black dark:bg-black dark:text-white">
+    <div className="body flex flex-col justify-center items-center">
       <div className="filter flex justify-center gap-5 m-5">
         <div className="search flex items-center">
           <input
