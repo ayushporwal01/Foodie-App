@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
@@ -9,8 +9,23 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
   const { loggedInUser } = useContext(UserContext);
 
+  //dark mode feature
+  const [darkMode, setDarkMode] = useState("dark");
+  useEffect(() => {
+    console.log(darkMode);
+    if (darkMode === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => (prevMode === "dark" ? "light" : "dark"));
+  };
+
   return (
-    <div className="header h-24 flex justify-between items-center border pr-13 fixed top-0 left-0 right-0 z-50 bg-white ">
+    <div className="header h-24 flex justify-between items-center border pr-13 fixed top-0 left-0 right-0 z-50 bg-white dark:bg-black dark:text-white">
       <div className="logo-container">
         <img className="logo w-30" src="/food-logo.png" alt="Food Logo" />
       </div>
@@ -38,7 +53,22 @@ const Header = () => {
           >
             {btnName}
           </button>
+
           <li className="font-semibold cursor-pointer">{loggedInUser}</li>
+
+          {/* Dark Mode Toggle */}
+          <li className="flex items-center gap-2">
+            <label className="cursor-pointer flex items-center gap-2">
+              <input
+                type="checkbox"
+                checked={darkMode === "dark"}
+                onChange={toggleDarkMode}
+              />
+              <span className="text-sm">
+                {darkMode === "dark" ? "🌙" : "☀️"}
+              </span>
+            </label>
+          </li>
         </ul>
       </div>
     </div>

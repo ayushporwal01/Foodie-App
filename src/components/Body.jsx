@@ -55,7 +55,7 @@ const Body = () => {
   }
 
   return (
-    <div className="body flex flex-col justify-center items-center">
+    <div className="body flex flex-col justify-center items-center  dark:bg-black dark:text-white">
       <div className="filter flex justify-center gap-5 m-5">
         <div className="search flex items-center">
           <input
