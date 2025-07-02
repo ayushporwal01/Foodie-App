@@ -62,7 +62,6 @@ const Header = () => {
             <ReactSwitch
               onChange={toggleDarkMode}
               checked={darkMode === "dark"}
-              onColor=""
             />
           </li>
         </ul>
