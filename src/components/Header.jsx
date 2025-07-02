@@ -2,6 +2,7 @@ import { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import ReactSwitch from "react-switch";
 
 //Named Export
 const Header = () => {
@@ -58,16 +59,11 @@ const Header = () => {
 
           {/* Dark Mode Toggle */}
           <li className="flex items-center gap-2">
-            <label className="cursor-pointer flex items-center gap-2">
-              <input
-                type="checkbox"
-                checked={darkMode === "dark"}
-                onChange={toggleDarkMode}
-              />
-              <span className="text-sm">
-                {darkMode === "dark" ? "🌙" : "☀️"}
-              </span>
-            </label>
+            <ReactSwitch
+              onChange={toggleDarkMode}
+              checked={darkMode === "dark"}
+              onColor=""
+            />
           </li>
         </ul>
       </div>
