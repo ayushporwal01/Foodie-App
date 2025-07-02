@@ -53,7 +53,7 @@ const Header = () => {
           <li className="hover:text-blue-500">
             <Link to="/grocery">Grocery</Link>
           </li>
-          <li className="hover:text-blue-500 cursor-pointer">Cart</li>
+          <li className="hover:text-blue-500 cursor-pointer">Cart (0 items)</li>
           <button
             className="login-btn w-18 h-8 bg-gray-500 text-white hover:bg-gray-600 transition-all ease-in cursor-pointer"
             onClick={() => {
