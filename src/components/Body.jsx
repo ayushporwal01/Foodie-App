@@ -92,7 +92,7 @@ const Body = () => {
         >
           Top Rated Restaurant
         </button>
-        <div className="search flex items-center">
+        <div className="search flex items-center gap-2">
           <label>UserName:</label>
           <input
             type="text"

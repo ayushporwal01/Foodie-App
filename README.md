@@ -8,7 +8,7 @@
 - Plugin Support
 
 
-# Foodie 
+# Food App
 /**
 - Header
 - Body 
