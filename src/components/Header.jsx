@@ -11,14 +11,18 @@ const Header = () => {
   const { loggedInUser } = useContext(UserContext);
 
   //dark mode feature
-  const [darkMode, setDarkMode] = useState("dark");
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("theme") || "light";
+  });
+
   useEffect(() => {
-    console.log(darkMode);
     if (darkMode === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
+
+    localStorage.setItem("theme", darkMode);
   }, [darkMode]);
 
   const toggleDarkMode = () => {
