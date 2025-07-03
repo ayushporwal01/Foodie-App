@@ -1,12 +1,12 @@
 import { useDispatch } from "react-redux";
 import { CDN_URL } from "../utils/constants";
-import addItem from "../utils/cartSlice";
+import { addItem } from "../utils/cartSlice";
 
 const ItemsList = ({ items }) => {
   const dispatch = useDispatch();
 
-  const handleAddItem = () => {
-    dispatch(addItem("pizza"));
+  const handleAddItem = (item) => {
+    dispatch(addItem(item));
   };
 
   return (
@@ -41,10 +41,13 @@ const ItemsList = ({ items }) => {
               className="w-full h-full rounded-xl"
               alt={item?.card?.info?.name}
             />
-            {/* ADD Button */}
+            {/* ADD button */}
             <button
               className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-28 h-10 text-lg font-bold uppercase border border-gray-400 rounded-[8px] text-green-600 bg-white shadow-[0px_0px_2px_2px_rgba(0,0,0,0.1)]  hover:bg-gray-200 transition-all duration-200 ease-in-out cursor-pointer"
-              onClick={handleAddItem}
+              onClick={(e) => {
+                e.stopPropagation();
+                handleAddItem(item);
+              }}
             >
               Add
             </button>
