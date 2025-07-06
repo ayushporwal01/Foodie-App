@@ -52,3 +52,9 @@ import {Component} from "path";
 - Unit Testing
 - Integration Testing
 - End to End Testing - e2e testing
+
+# Setting up Testing for our app
+- Installed React Testing Library
+- Installed Jest
+- Installed Babel
+- Configured Babel
