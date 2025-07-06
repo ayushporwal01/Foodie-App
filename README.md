@@ -7,7 +7,6 @@
 - Tree Shaking
 - Plugin Support
 
-
 # Food App
 /**
 - Header
@@ -18,7 +17,7 @@
 - Cart
 **/
 
-Two types Of Export/Import
+# Two types Of Export/Import
 
 - Default
 
@@ -30,7 +29,6 @@ import Component from "path"
 export const Component;
 import {Component} from "path";
 
-
 # React Hooks
 
 (Normal JS utility functions)
@@ -38,11 +36,9 @@ import {Component} from "path";
 - useState() - Superpowerful State Variables
 - useEffect() - Side-Effect Manager
 
-
 # Routing  
 - Client Side Routing
 - Server Side Routing
-
 
 # Redux Toolkit
 - Install @reduxjs/toolkit and react-redux
@@ -51,7 +47,6 @@ import {Component} from "path";
 - Slice(cartSlice)
 - dispatch(action)
 - Selector
-
 
 # Types Of Testing(developer)
 - Unit Testing
