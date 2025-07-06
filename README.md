@@ -56,5 +56,3 @@ import {Component} from "path";
 # Setting up Testing for our app
 - Installed React Testing Library
 - Installed Jest
-- Installed Babel
-- Configured Babel
