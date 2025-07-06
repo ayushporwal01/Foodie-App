@@ -25,7 +25,9 @@ const Cart = () => {
         </div>
       ) : (
         <div className="h-[calc(100vh-400px)] flex justify-center items-center">
-          <h1 className="text-lg">Your cart is empty, add items to cart!</h1>
+          <h1 className="text-lg dark:text-white">
+            Your cart is empty, add items to cart!
+          </h1>
         </div>
       )}
     </div>

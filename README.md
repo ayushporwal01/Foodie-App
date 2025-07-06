@@ -51,3 +51,9 @@ import {Component} from "path";
 - Slice(cartSlice)
 - dispatch(action)
 - Selector
+
+
+# Types Of Testing(developer)
+- Unit Testing
+- Integration Testing
+- End to End Testing - e2e testing
