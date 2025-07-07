@@ -11,7 +11,7 @@ describe("Test Cases for Contact Us Page", () => {
     expect(heading).toBeInTheDocument();
   });
 
-  it("should load button inside Contact component", () => {
+  it("should load button inside contact component", () => {
     render(<Contact />);
 
     const button = screen.getByRole("button");
