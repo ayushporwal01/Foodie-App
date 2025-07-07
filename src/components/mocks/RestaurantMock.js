@@ -1,4 +1,4 @@
-const MOCK_DATA = {
+export const MOCK_DATA = {
   info: {
     id: "882432",
     name: "Theobroma",
