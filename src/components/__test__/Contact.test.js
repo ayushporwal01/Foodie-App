@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import Contact from "../Contact";
 
 describe("Test Cases for Contact Us Page", () => {
-  test("should load contact us component", () => {
+  it("should load contact us component", () => {
     render(<Contact />);
 
     const heading = screen.getByRole("heading");
@@ -11,7 +11,7 @@ describe("Test Cases for Contact Us Page", () => {
     expect(heading).toBeInTheDocument();
   });
 
-  test("should load button inside Contact component", () => {
+  it("should load button inside Contact component", () => {
     render(<Contact />);
 
     const button = screen.getByRole("button");
@@ -20,7 +20,7 @@ describe("Test Cases for Contact Us Page", () => {
     expect(button).toBeInTheDocument();
   });
 
-  test("should load input name inside Contact component", () => {
+  it("should load input name inside Contact component", () => {
     render(<Contact />);
 
     //Querying
@@ -30,7 +30,7 @@ describe("Test Cases for Contact Us Page", () => {
     expect(inputName).toBeInTheDocument();
   });
 
-  test("should load 3 input inside Contact component", () => {
+  it("should load 3 input inside Contact component", () => {
     render(<Contact />);
 
     //Querying
