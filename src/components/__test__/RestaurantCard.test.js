@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import RestaurantCard from "../RestaurantCard";
 import MOCK_DATA from "../mocks/RestaurantMock";
 

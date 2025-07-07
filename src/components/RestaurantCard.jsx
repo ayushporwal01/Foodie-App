@@ -2,10 +2,9 @@ import { CDN_URL } from "../utils/constants";
 
 const RestaurantCard = (props) => {
   const { resData } = props;
-  console.log(resData);
 
   const { cloudinaryImageId, name, avgRating, cuisines, costForTwo, areaName } =
-    resData?.info;
+    resData?.info || [];
 
   return (
     <div className="res-card w-70 border">
