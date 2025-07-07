@@ -56,3 +56,9 @@ import {Component} from "path";
 # Setting up Testing for our app
 - Installed React Testing Library
 - Installed Jest
+- Installed babel-jest
+- Installed @babel/preset-env 
+- Installed @babel/preset-react
+- Installed jest-environment-jsdom
+- Installed jest-dom
+- Installed identity-obj-proxy
