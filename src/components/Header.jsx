@@ -13,7 +13,6 @@ const Header = () => {
 
   //Subscribing to the Store using a Selector
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
 
   //dark mode feature
   const [darkMode, setDarkMode] = useState(() => {

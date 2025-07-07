@@ -1,10 +1,10 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Header from "../Header";
 import { Provider } from "react-redux";
 import appStore from "../../utils/appStore";
 import { BrowserRouter } from "react-router-dom";
 
-test("should load button inside header component", () => {
+it("should render Header component with a login button", () => {
   render(
     <BrowserRouter>
       <Provider store={appStore}>
@@ -12,4 +12,7 @@ test("should load button inside header component", () => {
       </Provider>
     </BrowserRouter>
   );
+
+  const loginBtn = screen.getByRole("button");
+  expect(loginBtn).toBeInTheDocument();
 });
