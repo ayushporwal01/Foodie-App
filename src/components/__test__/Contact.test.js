@@ -30,7 +30,7 @@ describe("Test Cases for Contact Us Page", () => {
     expect(inputName).toBeInTheDocument();
   });
 
-  it("should load 3 input inside Contact component", () => {
+  it("should load 3 input inside contact component", () => {
     render(<Contact />);
 
     //Querying
