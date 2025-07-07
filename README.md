@@ -1,6 +1,7 @@
 # React + Vite
 
 # Vite
+
 - Bundling
 - Fast HMR(Hot Module Replacement)
 - Code Splitting
@@ -8,14 +9,16 @@
 - Plugin Support
 
 # Food App
-/**
+
+/\*\*
+
 - Header
-- Body 
-- About 
+- Body
+- About
 - Contact
 - Grocery
 - Cart
-**/
+  \*\*/
 
 # Two types Of Export/Import
 
@@ -36,29 +39,34 @@ import {Component} from "path";
 - useState() - Superpowerful State Variables
 - useEffect() - Side-Effect Manager
 
-# Routing  
+# Routing
+
 - Client Side Routing
 - Server Side Routing
 
 # Redux Toolkit
+
 - Install @reduxjs/toolkit and react-redux
-- Build Our Store 
+- Build Our Store
 - Connect store to our app
 - Slice(cartSlice)
 - dispatch(action)
 - Selector
 
 # Types Of Testing(developer)
+
 - Unit Testing
 - Integration Testing
 - End to End Testing - e2e testing
 
 # Setting up Testing for our app
-- Installed React Testing Library
-- Installed Jest
-- Installed babel-jest
-- Installed @babel/preset-env 
-- Installed @babel/preset-react
-- Installed jest-environment-jsdom
-- Installed jest-dom
-- Installed identity-obj-proxy
+
+- Install React Testing Library - For testing React components
+- Install Jest - JavaScript testing framework used to run tests.
+- Install babel-jest - Allows Jest to transform ES6+ and JSX using Babel before testing.
+- Install jest-environment-jsdom - Simulates a browser environment in Node.js for DOM testing.
+- Install jest-dom - Provides custom Jest matchers like toBeInTheDocument() for more readable assertions.
+- Install @babel/preset-env - Babel preset to compile modern JavaScript to ES5 for compatibility.
+- Install @babel/preset-react - Babel preset to compile JSX syntax used in React.
+- Install @testing-library/jest-dom
+- Install identity-obj-proxy - Mocks CSS module imports during tests to avoid style-related errors.
