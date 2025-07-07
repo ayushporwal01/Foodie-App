@@ -13,6 +13,19 @@ it("should render Header component with a login button", () => {
     </BrowserRouter>
   );
 
-  const loginBtn = screen.getByRole("button");
+  const loginBtn = screen.getByRole("button", { name: "Login" });
   expect(loginBtn).toBeInTheDocument();
+});
+
+it("should render Header component with cart items", () => {
+  render(
+    <BrowserRouter>
+      <Provider store={appStore}>
+        <Header />
+      </Provider>
+    </BrowserRouter>
+  );
+
+  const cartItems = screen.getByText("Cart - (0 items)");
+  expect(cartItems).toBeInTheDocument();
 });
