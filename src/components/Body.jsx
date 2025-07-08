@@ -58,6 +58,7 @@ const Body = () => {
         <div className="search flex items-center">
           <input
             type="text"
+            data-testid="searchInput"
             className="search-box h-8 px-3 border border-r-0 pl-2"
             value={searchText}
             onChange={(e) => {

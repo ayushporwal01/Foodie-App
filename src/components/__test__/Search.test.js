@@ -1,4 +1,4 @@
-import { render, waitFor } from "@testing-library/react";
+import { render, waitFor, screen } from "@testing-library/react";
 import Body from "../Body";
 import { MOCK_DATA } from "../mocks/mockRestaurantList";
 import { act } from "react";
@@ -13,4 +13,9 @@ global.fetch = jest.fn(() => {
 
 it("should render the Body component with Search", async () => {
   await act(async () => render(<Body />));
+
+  const searchBtn = screen.getByRole("button", {name: "Search"});
+  const searchInput = screen.getByTestId();
+
+  expect(searchBtn).toBeInTheDocument();
 });
