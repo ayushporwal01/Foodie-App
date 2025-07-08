@@ -14,9 +14,7 @@ global.fetch = jest.fn(() => {
 it("should render the Body component with Search", async () => {
   await act(async () => render(<Body />));
 
-  screen.debug();
   const searchBtn = screen.getByRole("button", { name: "Search" });
-  screen.debug();
   const searchInput = screen.getByTestId("searchInput");
   console.log(searchInput);
 
