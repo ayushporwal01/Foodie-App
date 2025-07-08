@@ -69,3 +69,4 @@ import {Component} from "path";
 - Install @babel/preset-react - Babel preset to compile JSX syntax used in React.
 - Install @testing-library/jest-dom - Provides custom Jest matchers like toBeInTheDocument() for more readable assertions.
 - Install identity-obj-proxy - Mocks CSS module imports during tests to avoid style-related errors.
+- Include Text Encoder/ Text Decoder - convert between strings and binary data.

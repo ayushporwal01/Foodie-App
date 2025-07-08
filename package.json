@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "watch-test": "jest --watch"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
