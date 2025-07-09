@@ -60,7 +60,7 @@ const Body = () => {
           <input
             type="text"
             data-testid="searchInput"
-            className="search-box h-8 px-3 border border-r-0 border-gray-400 pl-2 rounded-l-md focus:outline-none"
+            className="search-box px-52 py-1.5 font-medium border border-r-0 border-gray-400 pl-3 rounded-l-md focus:border-[#e08300] focus:ring-0 focus:outline-none"
             value={searchText}
             placeholder="Search a Restaurant..."
             onChange={(e) => {
@@ -68,7 +68,7 @@ const Body = () => {
             }}
           />
           <button
-            className="search-btn h-8 px-4 bg-[#e08300] text-white hover:bg-gray-600 rounded-r-md transition-all ease-in cursor-pointer"
+            className="search-btn px-4 py-[7px] bg-[#e08300] text-white hover:bg-gray-600 rounded-r-md transition-all ease-in cursor-pointer"
             onClick={() => {
               //filter the restaurant cards and update the UI
               const filteredRestaurant = ListOfRestaurants.filter((res) =>
