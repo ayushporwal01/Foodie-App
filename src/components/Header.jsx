@@ -56,7 +56,10 @@ const Header = () => {
             <Link to="/grocery">Grocery</Link>
           </li>
           <li className=" hover:text-[#e08300] cursor-pointer">
-            <Link to="/cart"> Cart ({cartItems.length} items)</Link>
+            <Link to="/cart" className="relative inline-block">
+              <TiShoppingCart className="text-2xl" />
+              <span className="absolute -top-0.5 -right-1 bg-[#e08300] text-white text-[10px] w-3.5 h-3.5 rounded-full flex justify-center items-center">{cartItems.length}</span>
+            </Link>
           </li>
           <button
             className="login-btn w-18 h-8 bg-gray-500 text-white hover:bg-gray-600 transition-all ease-in cursor-pointer"
