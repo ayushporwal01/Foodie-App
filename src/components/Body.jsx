@@ -54,9 +54,9 @@ const Body = () => {
   }
 
   return (
-    <div className="body flex flex-col justify-center items-center  dark:bg-black dark:text-white">
+    <div className="body flex flex-col justify-center items-center dark:bg-black dark:text-white">
       <div className="filter flex justify-center gap-5 m-5">
-        <div className="search flex items-center">
+        <div className="search flex items-center pt-5">
           <input
             type="text"
             data-testid="searchInput"
@@ -83,7 +83,7 @@ const Body = () => {
         </div>
       </div>
 
-      <div className="res-container grid grid-cols-4 gap-10">
+      <div className="res-container grid grid-cols-5 gap-10">
         {filteredRestaurant?.map((restaurant) => (
           <Link
             key={restaurant.info.id}

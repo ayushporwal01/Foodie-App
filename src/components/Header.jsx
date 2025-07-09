@@ -40,52 +40,64 @@ const Header = () => {
       <div className="logo-container">
         <img className="logo w-24 ml-10" src="/foodie2.png" alt="Food Logo" />
       </div>
-      <div className="nav-items">
+      <div className="nav-items flex items-center space-x-10">
+        {/* Navigation */}
         <ul className="flex space-x-10">
-          <li className="font-bold text-gray-700 dark:text-white hover:text-[#e08300]">
+          <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
             <Link to="/">Home</Link>
           </li>
-          <li className="font-bold text-gray-700 dark:text-white hover:text-[#e08300]">
+          <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
             <Link to="/about">About Us</Link>
           </li>
-          <li className="font-bold text-gray-700 dark:text-white hover:text-[#e08300]">
+          <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
             <Link to="/contact">Contact Us</Link>
           </li>
           <li className=" hover:text-[#e08300] cursor-pointer">
             <Link to="/cart" className="relative inline-block">
               <TiShoppingCart className="text-2xl" />
-              <span className="absolute -top-0.5 -right-1 bg-[#e08300] text-white text-[10px] w-3.5 h-3.5 rounded-full flex justify-center items-center">{cartItems.length}</span>
+              <span className="absolute -top-0.5 -right-1 bg-[#e08300] text-white text-[10px] w-3.5 h-3.5 rounded-full flex justify-center items-center">
+                {cartItems.length}
+              </span>
             </Link>
           </li>
+        </ul>
+
+        <div className="flex items-center space-x-4">
+          {/* Login / Logout Button */}
           <button
-            className="login-btn w-18 h-8 bg-gray-500 text-white hover:bg-gray-600 transition-all ease-in cursor-pointer"
+            className="login-btn px-3.5 py-1 bg-[#e08300] text-white font-medium rounded-md hover:bg-[#f08c00] transition-all ease-in cursor-pointer"
             onClick={() => {
               btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
             }}
-            >
+          >
             {btnName}
           </button>
 
-            <li>{onlineStatus ? "✅" : "🔴"}</li>
+          {/* Online Status */}
+          <span
+            className={`text-sm select-none ${
+              onlineStatus ? "text-green-500" : "text-red-500"
+            }`}
+          >
+            ●
+          </span>
+        </div>
 
-          {/* Dark Mode Toggle */}
-          <li className="flex items-center gap-2">
-            <ReactSwitch
-              onChange={toggleDarkMode}
-              checked={darkMode === "dark"}
-              checkedIcon={
-                <div className="flex items-center justify-center h-full pl-1 text-white text-xs">
-                  <FaMoon size={12} />
-                </div>
-              }
-              uncheckedIcon={
-                <div className="flex items-center justify-center h-full pl-1 text-yellow-500 text-xs">
-                  <FaSun size={12} />
-                </div>
-              }
-            />
-          </li>
-        </ul>
+        {/* Dark Mode Toggle */}
+        <ReactSwitch
+          onChange={toggleDarkMode}
+          checked={darkMode === "dark"}
+          checkedIcon={
+            <div className="flex items-center justify-center h-full pl-1 text-white text-xs">
+              <FaMoon size={12} />
+            </div>
+          }
+          uncheckedIcon={
+            <div className="flex items-center justify-center h-full pl-1 text-yellow-500 text-xs">
+              <FaSun size={12} />
+            </div>
+          }
+        />
       </div>
     </div>
   );
