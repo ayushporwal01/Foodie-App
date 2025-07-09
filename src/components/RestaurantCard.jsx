@@ -11,7 +11,7 @@ const RestaurantCard = (props) => {
   return (
     <div
       data-testid="resCard"
-      className="res-card rounded-lg bg-white text-black shadow-primary"
+      className="res-card w-70 rounded-lg bg-white text-black shadow-primary"
     >
       <img
         className="res-logo w-full h-52 object-cover object-center p-3 rounded-2xl"
