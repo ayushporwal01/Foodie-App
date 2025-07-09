@@ -42,17 +42,14 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul className="flex space-x-10">
-          <li className="font-bold text-gray-700 hover:text-[#e08300]">
+          <li className="font-bold text-gray-700 dark:text-white hover:text-[#e08300]">
             <Link to="/">Home</Link>
           </li>
-          <li className="font-bold text-gray-700 hover:text-[#e08300]">
+          <li className="font-bold text-gray-700 dark:text-white hover:text-[#e08300]">
             <Link to="/about">About Us</Link>
           </li>
-          <li className="font-bold text-gray-700 hover:text-[#e08300]">
+          <li className="font-bold text-gray-700 dark:text-white hover:text-[#e08300]">
             <Link to="/contact">Contact Us</Link>
-          </li>
-          <li className="font-bold text-gray-700 hover:text-[#e08300]">
-            <Link to="/grocery">Grocery</Link>
           </li>
           <li className=" hover:text-[#e08300] cursor-pointer">
             <Link to="/cart" className="relative inline-block">
@@ -69,7 +66,7 @@ const Header = () => {
             {btnName}
           </button>
 
-            <li>Online Status: {onlineStatus ? "✅" : "🔴"}</li>
+            <li>{onlineStatus ? "✅" : "🔴"}</li>
 
           {/* Dark Mode Toggle */}
           <li className="flex items-center gap-2">
