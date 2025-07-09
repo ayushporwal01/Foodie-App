@@ -6,14 +6,9 @@ const Contact = () => {
     >
       <div className="w-[450px] h-[450px] border flex flex-col justify-center items-center space-y-10">
         <h1 className="text-center font-bold text-3xl">Contact Us</h1>
+
         <form action="#" className="flex flex-col space-y-5">
           <div className="flex space-x-3">
-            <input
-              type="text"
-              placeholder="Your Name"
-              required
-              className="border pl-2 ml-2"
-            />
             <input
               type="text"
               placeholder="Your Name"
