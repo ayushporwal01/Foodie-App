@@ -47,9 +47,8 @@ const Body = () => {
         "Oops! Looks like you're offline. Check your internet connection."
       </h1>
     );
-  }
     
-    return (
+  return (
     <div className="body flex flex-col justify-center items-center dark:bg-black dark:text-white">
       {/* Search Bar - Always Visible */}
       <div className="filter flex justify-center gap-5 m-5">
@@ -80,27 +79,28 @@ const Body = () => {
         </div>
       </div>
 
-    {/* Restaurant Card or Shimmer */}
-    {ListOfRestaurants.length === 0 ? (
-      <Shimmer />;
-    ) : (
-      {/* Restaurant Container */}
-      <div className="res-container grid grid-cols-5 gap-10 px-20 py-5">
-        {filteredRestaurant?.map((restaurant) => (
-          <Link
-            key={restaurant.info.id}
-            to={"/restaurants/" + restaurant.info.id}
-          >
-            <div className="relative hover:scale-95 transition-transform duration-200 ease-in-out">
-              {restaurant.info.avgRating > 4.4 ? (
-                <RestaurantCardPromoted resData={restaurant} />
-              ) : (
-                <RestaurantCard resData={restaurant} />
-              )}
-            </div>
-          </Link>
-        ))}
-      </div>
+      {/* Restaurant Card or Shimmer */}
+      {ListOfRestaurants.length === 0 ? (
+        <Shimmer />;
+      ) : (
+        {/* Restaurant Container */}
+        <div className="res-container grid grid-cols-5 gap-10 px-20 py-5">
+          {filteredRestaurant?.map((restaurant) => (
+            <Link
+              key={restaurant.info.id}
+              to={"/restaurants/" + restaurant.info.id}
+            >
+              <div className="relative hover:scale-95 transition-transform duration-200 ease-in-out">
+                {restaurant.info.avgRating > 4.4 ? (
+                  <RestaurantCardPromoted resData={restaurant} />
+                ) : (
+                  <RestaurantCard resData={restaurant} />
+                )}
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
