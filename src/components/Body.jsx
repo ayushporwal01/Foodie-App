@@ -81,7 +81,7 @@ const Body = () => {
 
       {/* Restaurant Card or Shimmer */}
       {ListOfRestaurants.length === 0 ? (
-        <Shimmer />;
+        <Shimmer />
       ) : (
         <div className="res-container grid grid-cols-5 gap-10 px-20 py-5">
           {filteredRestaurant?.map((restaurant) => (
