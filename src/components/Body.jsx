@@ -48,15 +48,12 @@ const Body = () => {
       </h1>
     );
 
-  //Conditional Rendering
-  if (ListOfRestaurants.length === 0) {
-    return <Shimmer />;
-  }
-
-  return (
+    
+    return (
     <div className="body flex flex-col justify-center items-center dark:bg-black dark:text-white">
+      {/* Search Bar */}
       <div className="filter flex justify-center gap-5 m-5">
-        <div className="search flex items-center pt-5">
+        <div className="search flex items-center ">
           <input
             type="text"
             data-testid="searchInput"
@@ -83,7 +80,12 @@ const Body = () => {
         </div>
       </div>
 
-      <div className="res-container grid grid-cols-5 gap-10 px-20">
+    {/* Restaurant Card or Shimmer */}
+    {ListOfRestaurants.length === 0 ? (
+      <Shimmer />;
+    ) : (
+      {/* Restaurant Container */}
+      <div className="res-container grid grid-cols-5 gap-10 px-20 py-5">
         {filteredRestaurant?.map((restaurant) => (
           <Link
             key={restaurant.info.id}
@@ -99,6 +101,7 @@ const Body = () => {
           </Link>
         ))}
       </div>
+    )}
     </div>
   );
 };
