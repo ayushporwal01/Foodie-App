@@ -60,14 +60,15 @@ const Body = () => {
           <input
             type="text"
             data-testid="searchInput"
-            className="search-box h-8 px-3 border border-r-0 pl-2"
+            className="search-box h-8 px-3 border border-r-0 border-gray-400 pl-2 rounded-l-md focus:outline-none"
             value={searchText}
+            placeholder="Search a Restaurant..."
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
-            className="search-btn h-8 px-4 bg-[#75b92d] text-white hover:bg-gray-600  transition-all ease-in cursor-pointer"
+            className="search-btn h-8 px-4 bg-[#e08300] text-white hover:bg-gray-600 rounded-r-md transition-all ease-in cursor-pointer"
             onClick={() => {
               //filter the restaurant cards and update the UI
               const filteredRestaurant = ListOfRestaurants.filter((res) =>

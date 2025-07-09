@@ -10,11 +10,11 @@ const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
     <div>
       {/* Accordion Header */}
       <div
-        className="w-1/2 p-4 mx-auto my-4 bg-gray-200 shadow-lg select-none cursor-pointer"
+        className="w-[55%] bg-gray-200 p-4 mx-auto my-4 select-none cursor-pointer"
         onClick={handleClick}
       >
         <div className="flex justify-between">
-          <span className="text-lg font-bold">
+          <span className="text-lg font-bold pl-4.5">
             {data.title}({data.itemCards.length})
           </span>
           <span>

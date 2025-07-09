@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 import ReactSwitch from "react-switch";
+import { FaSun, FaMoon } from "react-icons/fa";
 import { useSelector } from "react-redux";
 
 //Named Export
@@ -34,26 +35,26 @@ const Header = () => {
   };
 
   return (
-    <div className="header h-24 flex justify-between items-center border pr-13 fixed top-0 left-0 right-0 z-50 bg-white dark:bg-black dark:text-white">
+    <div className="header h-24 flex justify-between items-center border-b pr-13 fixed top-0 left-0 right-0 z-50 bg-white dark:bg-black dark:text-white ">
       <div className="logo-container">
-        <img className="logo w-25 ml-8" src="/food-logo.png" alt="Food Logo" />
+        <img className="logo w-24 ml-10" src="/foodie2.png" alt="Food Logo" />
       </div>
       <div className="nav-items">
         <ul className="flex space-x-10">
           <li>Online Status: {onlineStatus ? "✅" : "🔴"}</li>
-          <li className="hover:text-blue-500">
+          <li className=" hover:text-[#e08300]">
             <Link to="/">Home</Link>
           </li>
-          <li className="hover:text-blue-500">
+          <li className=" hover:text-[#e08300]">
             <Link to="/about">About Us</Link>
           </li>
-          <li className="hover:text-blue-500">
+          <li className=" hover:text-[#e08300]">
             <Link to="/contact">Contact Us</Link>
           </li>
-          <li className="hover:text-blue-500">
+          <li className=" hover:text-[#e08300]">
             <Link to="/grocery">Grocery</Link>
           </li>
-          <li className="hover:text-blue-500 cursor-pointer">
+          <li className=" hover:text-[#e08300] cursor-pointer">
             <Link to="/cart"> Cart ({cartItems.length} items)</Link>
           </li>
           <button
@@ -72,6 +73,16 @@ const Header = () => {
             <ReactSwitch
               onChange={toggleDarkMode}
               checked={darkMode === "dark"}
+              checkedIcon={
+                <div className="flex items-center justify-center h-full pl-1 text-white text-xs">
+                  <FaMoon size={12} />
+                </div>
+              }
+              uncheckedIcon={
+                <div className="flex items-center justify-center h-full pl-1 text-yellow-500 text-xs">
+                  <FaSun size={12} />
+                </div>
+              }
             />
           </li>
         </ul>
