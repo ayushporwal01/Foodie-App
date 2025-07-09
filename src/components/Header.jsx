@@ -4,6 +4,7 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 import ReactSwitch from "react-switch";
 import { FaSun, FaMoon } from "react-icons/fa";
+import { TiShoppingCart } from "react-icons/ti";
 import { useSelector } from "react-redux";
 
 //Named Export
