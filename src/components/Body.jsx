@@ -47,11 +47,11 @@ const Body = () => {
         "Oops! Looks like you're offline. Check your internet connection."
       </h1>
     );
-
+  }
     
     return (
     <div className="body flex flex-col justify-center items-center dark:bg-black dark:text-white">
-      {/* Search Bar */}
+      {/* Search Bar - Always Visible */}
       <div className="filter flex justify-center gap-5 m-5">
         <div className="search flex items-center ">
           <input
@@ -101,7 +101,6 @@ const Body = () => {
           </Link>
         ))}
       </div>
-    )}
     </div>
   );
 };
