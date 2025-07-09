@@ -83,7 +83,6 @@ const Body = () => {
       {ListOfRestaurants.length === 0 ? (
         <Shimmer />;
       ) : (
-        {/* Restaurant Container */}
         <div className="res-container grid grid-cols-5 gap-10 px-20 py-5">
           {filteredRestaurant?.map((restaurant) => (
             <Link
