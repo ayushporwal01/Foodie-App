@@ -47,12 +47,12 @@ const Body = () => {
         "Oops! Looks like you're offline. Check your internet connection."
       </h1>
     );
-    
+
   return (
-    <div className="body flex flex-col justify-center items-center dark:bg-black dark:text-white">
+    <div className="body flex flex-col justify-center items-center py-24 dark:bg-black dark:text-white">
       {/* Search Bar - Always Visible */}
       <div className="filter flex justify-center gap-5 m-5">
-        <div className="search flex items-center ">
+        <div className="search flex items-center">
           <input
             type="text"
             data-testid="searchInput"
@@ -83,7 +83,7 @@ const Body = () => {
       {ListOfRestaurants.length === 0 ? (
         <Shimmer />
       ) : (
-        <div className="res-container grid grid-cols-5 gap-10 px-20 py-5">
+        <div className="res-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 px-4 sm:px-6 md:px-10 lg:px-14 xl:px-20 py-5">
           {filteredRestaurant?.map((restaurant) => (
             <Link
               key={restaurant.info.id}

@@ -18,7 +18,7 @@ function AppLayout() {
       <UserContext.Provider value={{ loggedInUser: username, setUsername }}>
         <div className="app">
           <Header />
-          <main className="mt-24">
+          <main>
             <Outlet />
           </main>
         </div>

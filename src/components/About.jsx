@@ -15,7 +15,7 @@ class About extends Component {
   render() {
     console.log("Parent Render");
     return (
-      <div className="bg-white text-black dark:bg-black dark:text-white">
+      <div className="bg-white text-black dark:bg-black dark:text-white min-h-screen flex flex-col justify-center items-center">
         <div>
           LoggedIn User:
           <UserContext.Consumer>

@@ -11,14 +11,14 @@ const RestaurantCard = (props) => {
   return (
     <div
       data-testid="resCard"
-      className="res-card bg-white text-black shadow-primary rounded-lg"
+      className="res-card w-full sm:w-[240px] bg-white text-black shadow-primary rounded-lg"
     >
       <img
         className="res-logo w-full h-44 object-cover p-3 rounded-2xl"
         src={CDN_URL + cloudinaryImageId}
       />
-      <div className="res-info pl-4">
-        <h3 className="res-name font-bold text-sm text-gray-700 truncate">{name}</h3>
+      <div className="res-info px-3">
+        <h3 className="res-name font-bold text-md text-gray-700 truncate">{name}</h3>
         <h4 className="res-cuisine truncate text-xs text-gray-700">
           {cuisines.join(", ")}
         </h4>
