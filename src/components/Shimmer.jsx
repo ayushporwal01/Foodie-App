@@ -22,7 +22,6 @@
 //   );
 // };
 
-import React from "react";
 import { ShimmerPostItem } from "react-shimmer-effects";
 
 const Shimmer = () => {
