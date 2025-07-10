@@ -56,7 +56,7 @@ const Body = () => {
           <input
             type="text"
             data-testid="searchInput"
-            className="search-box px-52 py-1.5 font-medium border border-r-0 border-gray-400 pl-3 rounded-l-md focus:border-[#e08300] focus:ring-0 focus:outline-none"
+            className="search-box w-full md:w-64 lg:w-96 xl:w-128 px-4 py-1.5 font-medium border border-r-0 border-gray-400 pl-3 rounded-l-md focus:border-[#e08300] focus:ring-0 focus:outline-none"
             value={searchText}
             placeholder="Search a Restaurant..."
             onChange={(e) => {
@@ -83,7 +83,7 @@ const Body = () => {
       {ListOfRestaurants.length === 0 ? (
         <Shimmer />
       ) : (
-        <div className="res-container  px-4 sm:px-6 md:px-10 lg:px-14 xl:px-20 py-5">
+        <div className="res-container flex flex-wrap justify-center gap-10 py-4">
           {filteredRestaurant?.map((restaurant) => (
             <Link 
               key={restaurant.info.id}
