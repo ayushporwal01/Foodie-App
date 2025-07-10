@@ -12,9 +12,9 @@ const Cart = () => {
 
   return (
     <div className="text-center my-28 p-10 dark:bg-black">
-      <h1 className="text-2xl font-bold dark:text-white">Cart</h1>
+      <h1 className="text-4xl font-bold  text-gray-700">Cart</h1>
       <button
-        className="m-2 p-2 bg-black text-white dark:bg-gray-200 dark:text-black rounded-lg cursor-pointer"
+        className="m-2 px-2 py-1 bg-black text-white dark:bg-gray-200 dark:text-black rounded-lg cursor-pointer"
         onClick={handleClearCart}
       >
         Clear Cart
