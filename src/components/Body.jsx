@@ -83,9 +83,9 @@ const Body = () => {
       {ListOfRestaurants.length === 0 ? (
         <Shimmer />
       ) : (
-        <div className="res-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 px-4 sm:px-6 md:px-10 lg:px-14 xl:px-20 py-5">
+        <div className="res-container  px-4 sm:px-6 md:px-10 lg:px-14 xl:px-20 py-5">
           {filteredRestaurant?.map((restaurant) => (
-            <Link
+            <Link 
               key={restaurant.info.id}
               to={"/restaurants/" + restaurant.info.id}
             >
