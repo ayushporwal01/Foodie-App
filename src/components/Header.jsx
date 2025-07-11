@@ -35,18 +35,18 @@ const Header = () => {
   return (
     <div className="header h-20 flex justify-between items-center border-b pr-13 fixed top-0 left-0 right-0 z-50 bg-white dark:bg-black dark:text-white ">
       <div className="logo-container">
-        <img className="logo w-24 ml-10" src="/foodie2.png" alt="Food Logo" />
+        <img className="logo w-[90px] ml-8" src="/foodie2.png" alt="Food Logo" />
       </div>
       <div className="nav-items flex items-center space-x-10">
         {/* Navigation */}
         <ul className="flex space-x-10">
-          <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
+          <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300] hidden">
             <Link to="/">Home</Link>
           </li>
-          <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
+          <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300] hidden">
             <Link to="/about">About Us</Link>
           </li>
-          <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
+          <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300] hidden">
             <Link to="/contact">Contact Us</Link>
           </li>
           <li className=" hover:text-[#e08300] cursor-pointer">
