@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const [showProfile, setShowProfile] = useState();
+const [showProfile, setShowProfile] = useState(false);
 
 const About = () => {
   return (
