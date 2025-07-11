@@ -50,25 +50,27 @@ const RestaurantMenu = () => {
   return (
     <div className="text-center py-28 dark:bg-black relative -top-8">
       {/* Menu Header */}
-      <div className="w-[55%] bg-[#171717] text-white flex mx-auto">
+      <div className="w-[55%] bg-[#171717] text-white flex mx-auto items-center gap-x-5 p-5">
         {/* Part 1 */}
         <img
-          className="res-logo w-72 h-48 object-cover p-4.5 rounded-3xl"
+          className="res-logo w-64 h-40 object-cover rounded-md"
           src={CDN_URL + cloudinaryImageId}
         />
         {/* Part 2 */}
         <div className="flex flex-col justify-start items-start">
-          <h1 className="text-4xl my-6 text-[#dbdbdb]">{name}</h1>
-          <p className="text-sm text-gray-400">{cuisines?.join(", ")}</p>
+          <h1 className="text-4xl text-[#dbdbdb]">{name}</h1>
+          <p className="text-sm text-[#b1b1b1] py-2">{cuisines?.join(", ")}</p>
 
-          <div className="space-x-2 flex items-center gap-1 py-2">
-            <span className="res-ratings px-2 py-[0.2rem] bg-[#027415] text-[16px] text-white font-bold rounded flex items-center gap-1.5">
-              <i class="fa-solid fa-star text-md"></i> {avgRating}
+          <div className="flex items-center gap-2 pt-2">
+            <span className="res-ratings px-2 py-1 bg-[#006711] text-sm text-white font-bold rounded flex items-center gap-1.5">
+              <i class="fa-solid fa-star text-sm"></i> {avgRating}
             </span>
-            <span className="text-gray-700 text-2xl">|</span>
-            <span className="text-md text-white font-bold">{deliveryTime}</span>
-            <span className="text-gray-700 text-2xl">|</span>
-            <span className="text-md text-white font-bold">
+            <span className="text-white text-sm">|</span>
+            <span className="text-sm text-white font-bold">
+              {deliveryTime}
+            </span>
+            <span className="text-white text-sm">|</span>
+            <span className="text-sm text-white font-bold">
               {costForTwoMessage}
             </span>
           </div>
