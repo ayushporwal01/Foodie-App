@@ -9,7 +9,9 @@ const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
     <div>
       {/* Accordion Header */}
       <div
-        className="w-[55%] bg-gray-200 p-4 mx-auto my-4 select-none cursor-pointer"
+        className={`w-[55%] bg-white p-4 mx-auto my-4 select-none cursor-pointer ${
+          !showItems ? "border-b-[15px] border-gray-200" : ""
+        }`}
         onClick={handleClick}
       >
         <div className="flex justify-between">
