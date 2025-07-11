@@ -54,8 +54,8 @@ const About = () => {
       <div className="mt-6 flex flex-wrap justify-center gap-3">
         <span className="bg-gray-100 text-sm px-3 py-1 rounded-full">HTML</span>
         <span className="bg-gray-100 text-sm px-3 py-1 rounded-full">CSS</span>
-        <span className="bg-gray-100 text-sm px-3 py-1 rounded-full">Tailwind</span>
         <span className="bg-gray-100 text-sm px-3 py-1 rounded-full">JavaScript</span>
+        <span className="bg-gray-100 text-sm px-3 py-1 rounded-full">Tailwind</span>
         <span className="bg-gray-100 text-sm px-3 py-1 rounded-full">React</span>
       </div>
 
