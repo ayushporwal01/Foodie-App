@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import RestaurantCategory from "./RestaurantCategory";
 import { useState } from "react";
+import { CDN_URL } from "../utils/constants";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
@@ -15,7 +16,8 @@ const RestaurantMenu = () => {
 
   const restaurantInfo = resInfo?.cards?.[2]?.card?.card?.info || {};
 
-  const { name, cuisines, costForTwoMessage } = restaurantInfo;
+  const { cloudinaryImageId, name, cuisines, costForTwoMessage } =
+    restaurantInfo;
 
   // Dynamically find the card with itemCards
   const regularCards =
@@ -39,10 +41,18 @@ const RestaurantMenu = () => {
 
   return (
     <div className="text-center py-28 dark:bg-black">
-      <h1 className="font-bold text-2xl my-6 dark:text-white">{name}</h1>
-      <p className="font-semibold text-lg dark:text-white">
-        {cuisines?.join(", ")} - {costForTwoMessage}
-      </p>
+      <div className="w-[55%] bg-[#171717] text-white flex justify-start mx-auto ">
+        <img
+          className="res-logo w-72 h-48 object-cover p-4.5 rounded-3xl"
+          src={CDN_URL + cloudinaryImageId}
+        />
+        <div>
+          <h1 className="text-3xl my-6 dark:text-white">{name}</h1>
+          <p className="font-semibold text-lg dark:text-white">
+            {cuisines?.join(", ")} - {costForTwoMessage}
+          </p>
+        </div>
+      </div>
       {/* category accordions */}
       {categories.map((category, index) => (
         //Controlled Component
