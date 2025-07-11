@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+const [showProfile, setShowProfile] = useState();
+
 const About = () => {
   return (
     <div className="flex justify-center items-center py-48">
