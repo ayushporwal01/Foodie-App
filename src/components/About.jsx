@@ -58,11 +58,6 @@ const About = () => {
         <span className="bg-gray-100 text-sm px-3 py-1 rounded-full">Tailwind</span>
         <span className="bg-gray-100 text-sm px-3 py-1 rounded-full">React</span>
       </div>
-
-      {/* Contact */}
-      <p className="mt-6 text-gray-600 text-sm">
-        📧 <a href="mailto:ayush@example.com" className="text-blue-600 underline">porwalayush953@gmail.com</a>
-      </p>
     </div>
       </div>
 
