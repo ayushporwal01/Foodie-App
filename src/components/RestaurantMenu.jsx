@@ -50,7 +50,7 @@ const RestaurantMenu = () => {
   return (
     <div className="text-center py-28 dark:bg-black relative -top-8">
       {/* Menu Header */}
-      <div className="w-[55%] bg-[#171717] text-white flex mx-auto items-center gap-x-5 p-5">
+      <div className="w-[55%] bg-[#171717] flex mx-auto items-center gap-x-5 p-5">
         <img
           className="res-logo w-64 h-40 object-cover rounded-md"
           src={CDN_URL + cloudinaryImageId}
@@ -60,15 +60,15 @@ const RestaurantMenu = () => {
           <h1 className="text-4xl text-[#dbdbdb]">{name}</h1>
           <p className="text-sm text-[#b1b1b1] py-2">{cuisines?.join(", ")}</p>
 
-          <div className="flex items-center gap-2 pt-2">
+          <div className="flex items-center gap-5 pt-2">
             <span className="res-ratings px-2 py-1 bg-[#006711] text-sm text-white font-bold rounded flex items-center gap-1.5">
               <i class="fa-solid fa-star text-sm"></i> {avgRating}
             </span>
-            <span className="text-white text-sm">|</span>
+            <span className="text-white text-sm font-bold">|</span>
             <span className="text-sm text-white font-bold">
               {deliveryTime}
             </span>
-            <span className="text-white text-sm">|</span>
+            <span className="text-white text-sm font-bold">|</span>
             <span className="text-sm text-white font-bold">
               {costForTwoMessage}
             </span>
