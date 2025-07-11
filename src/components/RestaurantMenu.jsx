@@ -15,9 +15,17 @@ const RestaurantMenu = () => {
   if (resInfo === null) return <Shimmer />;
 
   const restaurantInfo = resInfo?.cards?.[2]?.card?.card?.info || {};
-
-  const { cloudinaryImageId, name, cuisines, avgRating, slaString, costForTwoMessage} =
-    restaurantInfo;
+  
+  const {
+    cloudinaryImageId,
+    name,
+    cuisines,
+    avgRating,
+    costForTwoMessage,
+    sla
+  } = restaurantInfo;
+  
+  const deliveryTime = sla?.slaString || "";
 
   // Dynamically find the card with itemCards
   const regularCards =
@@ -52,15 +60,15 @@ const RestaurantMenu = () => {
         </div>
 
         <div className="space-x-2 flex items-center gap-1 py-2">
-          <span className="res-ratings px-1.5 py-0.5 bg-[#027415] text-md text-white font-semibold rounded flex items-center gap-1">
+          <span className="res-ratings px-2 py-[0.2rem] bg-[#027415] text-[16px] text-white font-bold rounded flex items-center gap-1.5">
             <i class="fa-solid fa-star text-md"></i> {avgRating}
           </span>
-          <span className="text-gray-700 text-lg">|</span>
-          <span className="font-semibold text-gray-700 text-[12px]">
-            {slaString}
+          <span className="text-gray-700 text-2xl">|</span>
+          <span className="text-md text-white font-bold">
+            {deliveryTime}
           </span>
-          <span className="text-gray-700 text-lg">|</span>
-          <span className="font-bold text-white text-sm">
+          <span className="text-gray-700 text-2xl">|</span>
+          <span className="text-md text-white font-bold">
             {costForTwoMessage}
           </span>
         </div>
