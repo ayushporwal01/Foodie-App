@@ -17,7 +17,7 @@ const ItemsList = ({ items }) => {
           className="m-2 p-2 border-b-2 border-gray-300 flex justify-between gap-20"
         >
           <div className="text-left">
-            <div className="font-bold text-md text-gray-600">
+            <div className="font-bold text-md text-[#555]">
               {/* Name */}
               {item?.card?.info?.name}
               {/* Price */}
@@ -28,7 +28,7 @@ const ItemsList = ({ items }) => {
               </p>
             </div>
             {/* Description */}
-            <p className="line-clamp-2 max-w-md text-gray-600">
+            <p className="line-clamp-2 max-w-md text-[#555]">
               {item?.card?.info?.description}
             </p>
           </div>
