@@ -9,9 +9,7 @@ import { useSelector } from "react-redux";
 
 //Named Export
 const Header = () => {
-  const [btnName, setBtnName] = useState("Login");
   const onlineStatus = useOnlineStatus();
-  const { loggedInUser } = useContext(UserContext);
 
   //Subscribing to the Store using a Selector
   const cartItems = useSelector((store) => store.cart.items);
