@@ -14,10 +14,17 @@ const About = () => {
         <img src="/pizza.png" className="w-96" alt="" />
       </div>
 
-      {/* Toggle Button */}
+      {/* Profile Section */}
+      {showProfile && 
       <div>
-        <button className="px-4 py-2 bg-[#e08300] hover:bg-[#e08e00] text-md font-bold text-white rounded-full cursor-pointer">
-          Show Profile
+        Profile
+      </div> 
+      }
+
+      {/* Show Profile Button */}
+      <div>
+        <button onClick={ () => setShowProfile(false)} className="px-4 py-2 bg-[#e08300] hover:bg-[#e08e00] text-md font-bold text-white rounded-full cursor-pointer">
+          {showProfile ? "Hide Profile" : "Show Profile"}
         </button>
       </div>
     </div>
