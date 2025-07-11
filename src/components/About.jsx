@@ -15,15 +15,14 @@ const About = () => {
       </div>
 
       {/* Profile Section */}
-      {showProfile && 
-      <div>
-        Profile
-      </div> 
-      }
+      {showProfile && <div>Profile</div>}
 
       {/* Show Profile Button */}
       <div>
-        <button onClick={ () => setShowProfile(false)} className="px-4 py-2 bg-[#e08300] hover:bg-[#e08e00] text-md font-bold text-white rounded-full cursor-pointer">
+        <button
+          onClick={toggleProfle}
+          className="px-4 py-2 bg-[#e08300] hover:bg-[#e08e00] text-md font-bold text-white rounded-full cursor-pointer"
+        >
           {showProfile ? "Hide Profile" : "Show Profile"}
         </button>
       </div>
