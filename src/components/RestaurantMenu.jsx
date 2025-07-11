@@ -41,7 +41,7 @@ const RestaurantMenu = () => {
 
   return (
     <div className="text-center py-28 dark:bg-black relative -top-8">
-      <div className="w-[55%] bg-[#171717] text-white flex justify-start mx-auto ">
+      <div className="w-[55%] bg-[#171717] text-white flex mx-auto">
         <img
           className="res-logo w-72 h-48 object-cover p-4.5 rounded-3xl"
           src={CDN_URL + cloudinaryImageId}
@@ -51,6 +51,10 @@ const RestaurantMenu = () => {
           <p className="text-sm text-gray-400">
             {cuisines?.join(", ")}
           </p>
+          
+        </div>
+        <div>
+          
         </div>
       </div>
       {/* category accordions */}
