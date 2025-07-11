@@ -2,7 +2,6 @@ import { useState } from "react";
 
 
 const About = () => {
-  const [showProfile, setShowProfile] = useState(false);
 
   return (
     <div className="flex justify-center items-center py-44">
