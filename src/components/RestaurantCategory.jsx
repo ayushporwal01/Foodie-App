@@ -1,4 +1,5 @@
 import ItemsList from "./itemList";
+import { HiChevronDown } from "react-icons/hi";
 
 const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
   const handleClick = () => {
@@ -9,8 +10,10 @@ const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
     <div>
       {/* Accordion Header */}
       <div
-        className={`w-[55%] bg-white p-4 mx-auto my-4 select-none cursor-pointer ${
-          !showItems ? "border-b-[15px] border-gray-200" : ""
+        className={`w-[55%] bg-white dark:bg-black dark:text-gray-100 p-4 mx-auto my-4 select-none cursor-pointer ${
+          !showItems
+            ? "border-b-[15px] border-gray-200 dark:border-[#171717]"
+            : ""
         }`}
         onClick={handleClick}
       >
@@ -19,7 +22,7 @@ const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
             {data.title}({data.itemCards.length})
           </span>
           <span>
-            <img src="/chevron-down.svg" />
+            <HiChevronDown className="w-8 h-8" />
           </span>
         </div>
         {/* Accordion Body */}
