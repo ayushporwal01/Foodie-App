@@ -16,7 +16,7 @@ const RestaurantMenu = () => {
 
   const restaurantInfo = resInfo?.cards?.[2]?.card?.card?.info || {};
 
-  const { cloudinaryImageId, name, cuisines, lastMileTravelString, costForTwoMessage} =
+  const { cloudinaryImageId, name, cuisines, avgRating, lastMileTravelString, costForTwoMessage} =
     restaurantInfo;
 
   // Dynamically find the card with itemCards
@@ -61,7 +61,7 @@ const RestaurantMenu = () => {
           </span>
           <span className="text-gray-700 text-lg">•</span>
           <span className="font-bold text-gray-700 text-[12px]">
-            {costForTwo}
+            {costForTwoMessage}
           </span>
         </div>
         <div></div>
