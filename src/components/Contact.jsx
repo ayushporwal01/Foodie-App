@@ -1,8 +1,8 @@
 const Contact = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center min-h-screen dark:bg-black">
       <div className="w-[450px] h-[450px] flex flex-col justify-center items-center space-y-10">
-        <h1 className="text-center font-bold text-4xl text-gray-700">
+        <h1 className="text-center text-4xl text-gray-700 font-bold">
           Contact Us
         </h1>
 
@@ -11,13 +11,13 @@ const Contact = () => {
             type="text"
             placeholder="Your Name"
             required
-            className="w-full border border-[#e08300] py-1.5 pl-2 rounded-lg focus:outline-none"
+            className="w-full border border-[#e08300] py-1.5 pl-2 rounded-lg focus:outline-none dark:placeholder-gray-700"
           />
           <input
             type="email"
             placeholder="Your Email"
             required
-            className="w-full border border-[#e08300] py-1.5 pl-2 rounded-lg focus:outline-none"
+            className="w-full border border-[#e08300] py-1.5 pl-2 rounded-lg focus:outline-none dark:placeholder-gray-700"
           />
 
           <textarea
@@ -25,7 +25,7 @@ const Contact = () => {
             rows="4"
             placeholder="Your Message..."
             required
-            className="w-full border border-[#e08300] py-5 pl-2 rounded-lg focus:outline-none"
+            className="w-full border border-[#e08300] py-5 pl-2 rounded-lg focus:outline-none dark:placeholder-gray-700"
           ></textarea>
 
           <button
