@@ -1,8 +1,9 @@
 import { useState } from "react";
 
-const [showProfile, setShowProfile] = useState(false);
 
 const About = () => {
+  const [showProfile, setShowProfile] = useState(false);
+  
   return (
     <div className="flex justify-center items-center py-48">
       {/* Initial Content */}
@@ -13,7 +14,8 @@ const About = () => {
         <img src="/pizza.png" className="w-96 " alt="" />
       </div>
 
-      
+      {/* Show Profile Button */}
+      <button className="bg-blue-500">Show Profile</button>
     </div>
   );
 };
