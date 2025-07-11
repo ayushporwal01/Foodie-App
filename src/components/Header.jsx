@@ -40,13 +40,13 @@ const Header = () => {
       <div className="nav-items flex items-center space-x-10">
         {/* Navigation */}
         <ul className="flex space-x-10">
-          <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300] hidden">
+          <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
             <Link to="/">Home</Link>
           </li>
-          <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300] hidden">
+          <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
             <Link to="/about">About Us</Link>
           </li>
-          <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300] hidden">
+          <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
             <Link to="/contact">Contact Us</Link>
           </li>
           <li className="relative hover:text-[#e08300] cursor-pointer">
