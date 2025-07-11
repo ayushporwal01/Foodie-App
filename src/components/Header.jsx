@@ -42,21 +42,21 @@ const Header = () => {
         {/* Navigation */}
         <ul className="flex space-x-10">
           <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
-            <Link to="/">
-              <FaHome />
-              <span>Home</span>
+            <Link to="/" className="flex items-center gap-1.5">
+              <FaHome className="flex lg:hidden" />
+              <span className="hidden lg:flex">Home</span>
             </Link>
           </li>
           <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
-            <Link to="/about">
-              <FaUser />
-              <span>About Us</span>
+            <Link to="/about" className="flex items-center gap-1.5">
+              <FaUser className="flex lg:hidden" />
+              <span className="hidden lg:flex">About Us</span>
             </Link>
           </li>
           <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
-            <Link to="/contact">
-              <FaEnvelope />
-              <span>Contact Us</span>
+            <Link to="/contact" className="flex items-center gap-1.5">
+              <FaEnvelope className="flex lg:hidden" />
+              <span className="hidden lg:flex">Contact Us</span>
             </Link>
           </li>
           <li className=" hover:text-[#e08300] cursor-pointer">
