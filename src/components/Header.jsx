@@ -66,11 +66,9 @@ const Header = () => {
           {/* Login / Logout Button */}
           <button
             className="login-btn px-3.5 py-1 bg-[#e08300] text-white font-medium rounded-md hover:bg-[#f08c00] transition-all ease-in cursor-pointer"
-            onClick={() => {
-              btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
-            }}
+            
           >
-            {btnName}
+          
           </button>
 
           {/* Online Status */}
