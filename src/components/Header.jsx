@@ -49,6 +49,7 @@ const Header = () => {
           </li>
           <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
             <Link to="/about">
+              <FaUser />
               <span>About Us</span>
             </Link>
           </li>
