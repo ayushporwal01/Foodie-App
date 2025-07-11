@@ -15,16 +15,16 @@ const RestaurantMenu = () => {
   if (resInfo === null) return <Shimmer />;
 
   const restaurantInfo = resInfo?.cards?.[2]?.card?.card?.info || {};
-  
+
   const {
     cloudinaryImageId,
     name,
     cuisines,
     avgRating,
     costForTwoMessage,
-    sla
+    sla,
   } = restaurantInfo;
-  
+
   const deliveryTime = sla?.slaString || "";
 
   // Dynamically find the card with itemCards
@@ -49,28 +49,29 @@ const RestaurantMenu = () => {
 
   return (
     <div className="text-center py-28 dark:bg-black relative -top-8">
+      {/* Menu Header */}
       <div className="w-[55%] bg-[#171717] text-white flex mx-auto">
         {/* Part 1 */}
         <img
           className="res-logo w-72 h-48 object-cover p-4.5 rounded-3xl"
           src={CDN_URL + cloudinaryImageId}
         />
-         {/* Part 2 */}
-        <div className="space-x-2 flex flex-col items-center gap-1 py-2">
+        {/* Part 2 */}
+        <div className="flex flex-col justify-start items-start">
           <h1 className="text-4xl my-6 text-[#dbdbdb]">{name}</h1>
           <p className="text-sm text-gray-400">{cuisines?.join(", ")}</p>
-        
-          <span className="res-ratings px-2 py-[0.2rem] bg-[#027415] text-[16px] text-white font-bold rounded flex items-center gap-1.5">
-            <i class="fa-solid fa-star text-md"></i> {avgRating}
-          </span>
-          <span className="text-gray-700 text-2xl">|</span>
-          <span className="text-md text-white font-bold">
-            {deliveryTime}
-          </span>
-          <span className="text-gray-700 text-2xl">|</span>
-          <span className="text-md text-white font-bold">
-            {costForTwoMessage}
-          </span>
+
+          <div className="space-x-2 flex items-center gap-1 py-2">
+            <span className="res-ratings px-2 py-[0.2rem] bg-[#027415] text-[16px] text-white font-bold rounded flex items-center gap-1.5">
+              <i class="fa-solid fa-star text-md"></i> {avgRating}
+            </span>
+            <span className="text-gray-700 text-2xl">|</span>
+            <span className="text-md text-white font-bold">{deliveryTime}</span>
+            <span className="text-gray-700 text-2xl">|</span>
+            <span className="text-md text-white font-bold">
+              {costForTwoMessage}
+            </span>
+          </div>
         </div>
       </div>
 
