@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import UserContext from "../utils/UserContext";
 
 const Body = () => {
   //Local State Variable - Superpowerful React Variable
