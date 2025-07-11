@@ -8,7 +8,7 @@ const About = () => {
       {/* Initial Content */}
       <div className="flex items-center justify-center">
         <h2 className="text-6xl max-w-1/2 font-bold text-[#555] leading-snug">
-          Home of your next favorite bite.
+          Home of your next favorite meal.
         </h2>
 
         <img src="/pizza.png" className="w-96" alt="" />
