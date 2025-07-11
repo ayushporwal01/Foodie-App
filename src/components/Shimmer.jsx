@@ -4,7 +4,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 const Shimmer = () => {
   return (
     <div className="flex justify-center items-center dark:bg-black min-h-screen">
-      <div className="shimmer-container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 py-6">
+      <div className="shimmer-container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 py-3">
         {Array.from({ length: 15 }).map((_, index) => (
           <Skeleton
             key={index}
