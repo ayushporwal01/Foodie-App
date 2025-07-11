@@ -4,7 +4,6 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 import ReactSwitch from "react-switch";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
-import { FaHome, FaUser, FaEnvelope } from "react-icons/fa";
 import { useSelector } from "react-redux";
 
 //Named Export
@@ -42,22 +41,13 @@ const Header = () => {
         {/* Navigation */}
         <ul className="flex space-x-10">
           <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
-            <Link to="/" className="flex items-center gap-1.5">
-              <FaHome className="flex lg:hidden text-xl" />
-              <span className="hidden lg:flex">Home</span>
-            </Link>
+            <Link to="/">Home</Link>
           </li>
           <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
-            <Link to="/about" className="flex items-center gap-1.5">
-              <FaUser className="flex lg:hidden text-lg" />
-              <span className="hidden lg:flex">About Us</span>
-            </Link>
+            <Link to="/about">About Us</Link>
           </li>
           <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
-            <Link to="/contact" className="flex items-center gap-1.5">
-              <FaEnvelope className="flex lg:hidden text-lg" />
-              <span className="hidden lg:flex">Contact Us</span>
-            </Link>
+            <Link to="/contact">Contact Us</Link>
           </li>
           <li className=" hover:text-[#e08300] cursor-pointer">
             <Link to="/cart" className="relative inline-block">
