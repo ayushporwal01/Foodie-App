@@ -15,9 +15,12 @@ const About = () => {
 
         <img src="/pizza.png" className="w-96" alt="" />
       </div>
-
       {/* Profile Section */}
-      <div className={profileClass}>
+      <div
+        className={`absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-in-out ${
+          showProfile ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
         <div className="text-center">
           <h2 className="text-4xl font-bold text-[#444] mb-4">Your Profile</h2>
           <p className="text-lg text-gray-600 max-w-md">
@@ -26,7 +29,6 @@ const About = () => {
           </p>
         </div>
       </div>
-
       {/* Show Profile Button */}
       <div>
         <button
