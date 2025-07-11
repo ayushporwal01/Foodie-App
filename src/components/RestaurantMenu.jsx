@@ -40,16 +40,16 @@ const RestaurantMenu = () => {
   console.log(categories);
 
   return (
-    <div className="text-center py-28 dark:bg-black">
+    <div className="text-center py-28 dark:bg-black relative -top-8">
       <div className="w-[55%] bg-[#171717] text-white flex justify-start mx-auto ">
         <img
           className="res-logo w-72 h-48 object-cover p-4.5 rounded-3xl"
           src={CDN_URL + cloudinaryImageId}
         />
         <div>
-          <h1 className="text-3xl my-6 dark:text-white">{name}</h1>
-          <p className="font-semibold text-lg dark:text-white">
-            {cuisines?.join(", ")} - {costForTwoMessage}
+          <h1 className="text-4xl my-6 text-[#dbdbdb]">{name}</h1>
+          <p className="text-sm text-gray-400">
+            {cuisines?.join(", ")}
           </p>
         </div>
       </div>
