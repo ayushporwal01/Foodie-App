@@ -43,6 +43,7 @@ const Header = () => {
         <ul className="flex space-x-10">
           <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
             <Link to="/">
+              <FaHome />
               <span>Home</span>
             </Link>
           </li>
