@@ -17,8 +17,16 @@ const About = () => {
       </div>
 
       {/* Profile Section */}
-      
-      
+      <div className={profileClass}>
+        <div className="text-center">
+          <h2 className="text-4xl font-bold text-[#444] mb-4">Your Profile</h2>
+          <p className="text-lg text-gray-600 max-w-md">
+            Welcome to your profile! Here you can manage your orders,
+            preferences, and more.
+          </p>
+        </div>
+      </div>
+
       {/* Show Profile Button */}
       <div>
         <button
