@@ -3,6 +3,8 @@ import { useState } from "react";
 const About = () => {
   const [showProfile, setShowProfile] = useState(false);
 
+  const toggleProfile = () => setShowProfile((prev) => !prev);
+
   return (
     <div className="h-screen flex flex-col justify-center items-center">
       {/* Initial Content */}
@@ -15,12 +17,12 @@ const About = () => {
       </div>
 
       {/* Profile Section */}
-      {showProfile && <div>Profile</div>}
-
+      
+      
       {/* Show Profile Button */}
       <div>
         <button
-          onClick={toggleProfle}
+          onClick={toggleProfile}
           className="px-4 py-2 bg-[#e08300] hover:bg-[#e08e00] text-md font-bold text-white rounded-full cursor-pointer"
         >
           {showProfile ? "Hide Profile" : "Show Profile"}
