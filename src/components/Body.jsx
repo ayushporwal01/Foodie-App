@@ -39,12 +39,13 @@ const Body = () => {
 
   const onlineStatus = useOnlineStatus();
 
-  if (onlineStatus === false)
+  if (!onlineStatus)
     return (
-      <h1>
-        Oops! Looks like you're offline. <br />
-        Check your internet connection.
-      </h1>
+      <div className="flex justify-center items-center h-screen">
+        <h1 className="text-lg dark:text-white">
+          Oops! Looks like you're offline. Check your internet connection.
+        </h1>
+      </div>
     );
 
   return (
