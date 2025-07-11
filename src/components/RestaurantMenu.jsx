@@ -51,12 +51,11 @@ const RestaurantMenu = () => {
     <div className="text-center py-28 dark:bg-black relative -top-8">
       {/* Menu Header */}
       <div className="w-[55%] bg-[#171717] text-white flex mx-auto items-center gap-x-5 p-5">
-        {/* Part 1 */}
         <img
           className="res-logo w-64 h-40 object-cover rounded-md"
           src={CDN_URL + cloudinaryImageId}
         />
-        {/* Part 2 */}
+
         <div className="flex flex-col justify-start items-start">
           <h1 className="text-4xl text-[#dbdbdb]">{name}</h1>
           <p className="text-sm text-[#b1b1b1] py-2">{cuisines?.join(", ")}</p>
