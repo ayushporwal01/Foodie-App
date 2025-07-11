@@ -11,7 +11,6 @@ const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
   const [searchText, setSearchText] = useState("");
-  const { loggedInUser, setUsername } = useContext(UserContext);
 
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
