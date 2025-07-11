@@ -49,10 +49,10 @@ const Header = () => {
           <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300] hidden">
             <Link to="/contact">Contact Us</Link>
           </li>
-          <li className=" hover:text-[#e08300] cursor-pointer">
-            <Link to="/cart" className="relative inline-block">
-              <TiShoppingCart className="text-2xl" />
-              <span className="absolute -top-0.5 -right-1 bg-[#e08300] text-white text-[10px] w-3.5 h-3.5 rounded-full flex justify-center items-center">
+          <li className="relative hover:text-[#e08300] cursor-pointer">
+            <Link to="/cart" className="relative flex items-center justify-center">
+              <TiShoppingCart className="text-2xl text-[#444] dark:text-white" />
+              <span className="absolute -top-0.5 -right-1.5 bg-[#e08300] text-white text-[10px] w-3.5 h-3.5 rounded-full flex justify-center items-center">
                 {cartItems.length}
               </span>
             </Link>
