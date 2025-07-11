@@ -42,7 +42,8 @@ const Body = () => {
   if (onlineStatus === false)
     return (
       <h1>
-        "Oops! Looks like you're offline. Check your internet connection."
+        Oops! Looks like you're offline. <br />
+        Check your internet connection.
       </h1>
     );
 
@@ -83,7 +84,7 @@ const Body = () => {
       ) : (
         <div className="res-container flex flex-wrap justify-center gap-10 py-4">
           {filteredRestaurant?.map((restaurant) => (
-            <Link 
+            <Link
               key={restaurant.info.id}
               to={"/restaurants/" + restaurant.info.id}
             >
