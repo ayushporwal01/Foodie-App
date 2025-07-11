@@ -1,7 +1,6 @@
 import { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import UserContext from "../utils/UserContext";
 import ReactSwitch from "react-switch";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
