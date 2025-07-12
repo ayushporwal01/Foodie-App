@@ -4,6 +4,7 @@ import useRestaurantMenu from "../utils/useRestaurantMenu";
 import RestaurantCategory from "./RestaurantCategory";
 import { useState } from "react";
 import { CDN_URL } from "../utils/constants";
+import MenuShimmer from "./MenuShimmer";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
@@ -15,7 +16,7 @@ const RestaurantMenu = () => {
   if (resInfo === null)
     return (
       <div className="pt-28 dark:bg-black">
-        <Shimmer />;
+        <MenuShimmer />
       </div>
     );
 
