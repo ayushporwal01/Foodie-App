@@ -7,6 +7,29 @@
   --shadow-light: 0 3px 10px rgb(0, 0, 0, 0.1);
 }
 
+@layer utilities {
+  .animate-shimmer {
+    background: linear-gradient(
+      90deg,
+      rgb(230, 230, 230) 5%,
+      rgb(204, 204, 204) 25%,
+      rgb(230, 230, 230) 35%
+    );
+    background-size: 1000px 100%;
+    background-repeat: repeat;
+    animation: shimmer 1.5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position-x: -1000px;
+    }
+    100% {
+      background-position-x: 1000px;
+    }
+  }
+}
+
 .shimmer-wrapper {
   @apply flex justify-center items-center dark:bg-black min-h-screen;
 }
