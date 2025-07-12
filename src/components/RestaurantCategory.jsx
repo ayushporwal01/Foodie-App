@@ -10,7 +10,7 @@ const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
     <div>
       {/* Accordion Header */}
       <div
-        className={`w-[55%] bg-white dark:bg-black dark:text-gray-100 p-4 mx-auto my-4 select-none cursor-pointer ${
+        className={`w-[55%] bg-white dark:bg-black dark:text-[#dbdbdb] p-4 mx-auto my-4 select-none cursor-pointer ${
           !showItems
             ? "border-b-[15px] border-gray-200 dark:border-[#171717]"
             : ""
