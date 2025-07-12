@@ -61,6 +61,7 @@ const RestaurantMenu = () => {
         <img
           className="res-logo w-64 h-40 object-cover rounded-md"
           src={CDN_URL + cloudinaryImageId}
+          loading="lazy"
         />
         
         {/* Right Part */}
