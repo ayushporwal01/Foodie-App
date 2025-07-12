@@ -18,9 +18,12 @@ const MenuShimmer = () => {
       </div>
 
       {/* Menu */}
-      <div className="w-[55%] h-50 flex flex-col justify-start pt-16">
-        <div className="w-48 h-4 bg-[#adadad]">
+      <div className="w-[55%] h-50 flex flex-col justify-start pt-10">
+        <div className="w-48 h-4 bg-[#adadad] ml-12">
         
+        <div>
+            
+        </div>
       </div>    
       </div>
     </div>

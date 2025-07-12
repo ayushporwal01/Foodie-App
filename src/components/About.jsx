@@ -30,8 +30,9 @@ const About = () => {
           {/* GitHub Profile Image */}
           <img
             src="https://github.com/ayushporwal01.png"
-            alt="GitHub Avatar"
             className="h-30 rounded-full mx-auto mb-4 border-2 border-gray-300"
+            loading="lazy"
+            alt="GitHub Avatar"
           />
           {/* Name + Tagline */}
           <h2 className="text-3xl font-bold text-[#333] mb-1">Ayush Porwal</h2>
