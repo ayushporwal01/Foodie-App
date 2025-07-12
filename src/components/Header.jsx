@@ -33,9 +33,13 @@ const Header = () => {
   };
 
   return (
-    <div className="header h-20 flex justify-between items-center border-b pr-13 fixed top-0 left-0 right-0 z-50 bg-white dark:bg-black dark:text-white ">
+    <div className="header h-20 flex justify-between items-center bg-white dark:bg-black border-b pr-13 fixed top-0 left-0 right-0 z-50 dark:text-white ">
       <div className="logo-container">
-        <img className="logo w-[90px] ml-8" src="/foodie2.png" alt="Food Logo" />
+        <img
+          className="logo w-[90px] ml-8"
+          src="/foodie2.png"
+          alt="Food Logo"
+        />
       </div>
       <div className="nav-items flex items-center space-x-10">
         {/* Navigation */}
@@ -50,7 +54,10 @@ const Header = () => {
             <Link to="/contact">Contact Us</Link>
           </li>
           <li className="relative hover:text-[#e08300] cursor-pointer">
-            <Link to="/cart" className="relative flex items-center justify-center">
+            <Link
+              to="/cart"
+              className="relative flex items-center justify-center"
+            >
               <TiShoppingCart className="text-2xl text-[#444] dark:text-white" />
               <span className="absolute -top-0.5 -right-1.5 bg-[#e08300] text-white text-[10px] w-3.5 h-3.5 rounded-full flex justify-center items-center">
                 {cartItems.length}

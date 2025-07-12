@@ -6,7 +6,7 @@ const About = () => {
   const toggleProfile = () => setShowProfile((prev) => !prev);
 
   return (
-    <div className="relative h-screen flex flex-col justify-center items-center overflow-hidden dark:bg-black">
+    <div className="relative h-screen flex flex-col justify-center items-center overflow-hidden">
       {/* Initial Content */}
       <div
         className={`absolute inset-0 flex items-center justify-center space-x-5 transition-transform duration-500 ease-in-out ${
