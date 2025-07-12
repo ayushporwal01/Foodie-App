@@ -2,7 +2,9 @@ import { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import ReactSwitch from "react-switch";
-import { FaSun, FaMoon } from "react-icons/fa";
+import { FaSun, FaMoon, FaUserAlt } from "react-icons/fa";
+import { AiFillHome } from "react-icons/ai";
+import { MdContactMail } from "react-icons/md";
 import { TiShoppingCart } from "react-icons/ti";
 import { useSelector } from "react-redux";
 
@@ -45,13 +47,24 @@ const Header = () => {
         {/* Navigation */}
         <ul className="flex space-x-10">
           <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
-            <Link to="/">Home</Link>
+            <Link to="/">
+              {" "}
+              <AiFillHome />
+              Home
+            </Link>
           </li>
           <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
-            <Link to="/about">About Us</Link>
+            <Link to="/about">
+              {" "}
+              <FaUserAlt />
+              About Us
+            </Link>
           </li>
           <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
-            <Link to="/contact">Contact Us</Link>
+            <Link to="/contact">
+              <MdContactMail />
+              Contact Us
+            </Link>
           </li>
           <li className="relative hover:text-[#e08300] cursor-pointer">
             <Link
