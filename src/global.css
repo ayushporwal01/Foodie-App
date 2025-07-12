@@ -61,3 +61,19 @@
 .shimmer-tag {
   @apply h-4 bg-[#ddd] w-[30%] mt-3;
 }
+
+.item-card {
+  @apply flex justify-between items-center gap-5 bg-white shadow-light mt-10 p-4;
+}
+
+.item-text-block {
+  @apply flex flex-col space-y-3;
+}
+
+.item-line {
+  @apply bg-[#adadad] h-4 ml-10;
+}
+
+.item-image {
+  @apply h-[105px] w-[105px] bg-gray-200 border border-[#adadad] rounded-md;
+}
