@@ -12,7 +12,12 @@ const RestaurantMenu = () => {
 
   const [showIndex, setShowIndex] = useState(0);
 
-  if (resInfo === null) return <Shimmer />;
+  if (resInfo === null)
+    return (
+      <div className="pt-28">
+        <Shimmer />;
+      </div>
+    );
 
   const restaurantInfo = resInfo?.cards?.[2]?.card?.card?.info || {};
 
@@ -65,9 +70,7 @@ const RestaurantMenu = () => {
               <i class="fa-solid fa-star text-sm"></i> {avgRating}
             </span>
             <span className="text-white text-sm font-bold">|</span>
-            <span className="text-sm text-white font-bold">
-              {deliveryTime}
-            </span>
+            <span className="text-sm text-white font-bold">{deliveryTime}</span>
             <span className="text-white text-sm font-bold">|</span>
             <span className="text-sm text-white font-bold">
               {costForTwoMessage}
