@@ -40,6 +40,7 @@ const ItemsList = ({ items }) => {
               src={CDN_URL + item.card.info.imageId}
               className="w-full h-full rounded-xl"
               alt={item?.card?.info?.name}
+              loading="lazy"
             />
             {/* ADD button */}
             <button
