@@ -20,7 +20,7 @@ const Cart = () => {
         Clear Cart
       </button>
       {cartItems.length > 0 ? (
-        <div className="md:w-6/12 mx-auto p-5 mt-4 shadow-lg">
+        <div className="md:w-6/12 mx-auto p-5 mt-4">
           <ItemsList items={cartItems} />
         </div>
       ) : (
