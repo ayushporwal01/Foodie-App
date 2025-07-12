@@ -26,13 +26,101 @@ const MenuShimmer = () => {
         </div>
 
         {/* Items */}
-        <div className="flex justify-between items-center gap-5 bg-white shadow-light mt-10 p-4">
-          <div className="flex flex-col space-y-3">
-            <div className="w-56 h-4 bg-[#adadad] ml-10"></div>
-            <div className="w-28 h-4 bg-[#adadad] ml-10 mt-4"></div>
-            <div className="w-64 h-4 bg-[#adadad] ml-10 mt-4"></div>
+        <div className="item-card">
+          <div className="item-text-block">
+            <div className="item-line-md"></div>
+            <div className="item-line-sm"></div>
+            <div className="item-line-lg"></div>
           </div>
-          <div className="h-[105px] w-[105px] bg-gray-200 border border-[#adadad] rounded-md"></div>
+          <div className="item-image"></div>
+        </div>
+        <div className="item-card">
+          <div className="item-text-block">
+            <div className="item-line-md"></div>
+            <div className="item-line-sm"></div>
+            <div className="item-line-lg"></div>
+          </div>
+          <div className="item-image"></div>
+        </div>
+        <div className="item-card">
+          <div className="item-text-block">
+            <div className="item-line-md"></div>
+            <div className="item-line-sm"></div>
+            <div className="item-line-lg"></div>
+          </div>
+          <div className="item-image"></div>
+        </div>
+        <div className="item-card">
+          <div className="item-text-block">
+            <div className="item-line-md"></div>
+            <div className="item-line-sm"></div>
+            <div className="item-line-lg"></div>
+          </div>
+          <div className="item-image"></div>
+        </div>
+        <div className="item-card">
+          <div className="item-text-block">
+            <div className="item-line-md"></div>
+            <div className="item-line-sm"></div>
+            <div className="item-line-lg"></div>
+          </div>
+          <div className="item-image"></div>
+        </div>
+        <div className="item-card">
+          <div className="item-text-block">
+            <div className="item-line-md"></div>
+            <div className="item-line-sm"></div>
+            <div className="item-line-lg"></div>
+          </div>
+          <div className="item-image"></div>
+        </div>
+        <div className="item-card">
+          <div className="item-text-block">
+            <div className="item-line-md"></div>
+            <div className="item-line-sm"></div>
+            <div className="item-line-lg"></div>
+          </div>
+          <div className="item-image"></div>
+        </div>
+        <div className="item-card">
+          <div className="item-text-block">
+            <div className="item-line-md"></div>
+            <div className="item-line-sm"></div>
+            <div className="item-line-lg"></div>
+          </div>
+          <div className="item-image"></div>
+        </div>
+        <div className="item-card">
+          <div className="item-text-block">
+            <div className="item-line-md"></div>
+            <div className="item-line-sm"></div>
+            <div className="item-line-lg"></div>
+          </div>
+          <div className="item-image"></div>
+        </div>
+        <div className="item-card">
+          <div className="item-text-block">
+            <div className="item-line-md"></div>
+            <div className="item-line-sm"></div>
+            <div className="item-line-lg"></div>
+          </div>
+          <div className="item-image"></div>
+        </div>
+        <div className="item-card">
+          <div className="item-text-block">
+            <div className="item-line-md"></div>
+            <div className="item-line-sm"></div>
+            <div className="item-line-lg"></div>
+          </div>
+          <div className="item-image"></div>
+        </div>
+        <div className="item-card">
+          <div className="item-text-block">
+            <div className="item-line-md"></div>
+            <div className="item-line-sm"></div>
+            <div className="item-line-lg"></div>
+          </div>
+          <div className="item-image"></div>
         </div>
       </div>
     </div>
