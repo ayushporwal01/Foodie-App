@@ -15,18 +15,18 @@
       rgb(204, 204, 204) 25%,
       rgb(230, 230, 230) 35%
     );
-    background-size: 200% 100%;
-    background-repeat: no-repeat;
-    animation: shimmer 1.5s linear infinite;
+    background-size: 1000px 100%;
+    background-repeat: repeat;
+    animation: shimmer 3s ease infinite;
     will-change: background-position;
   }
 
   @keyframes shimmer {
     0% {
-      background-position-x: -200%;
+      background-position-x: -1000px;
     }
     100% {
-      background-position-x: 200%;
+      background-position-x: 1000px;
     }
   }
 }
