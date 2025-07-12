@@ -14,7 +14,7 @@ const Cart = () => {
     <div className="text-center pt-32 dark:bg-black">
       <h1 className="text-4xl font-bold  text-gray-700">Cart</h1>
       <button
-        className="m-2 px-2 py-1 bg-black text-white dark:bg-gray-200 dark:text-black rounded-lg cursor-pointer"
+        className="mt-2 px-2 py-1 bg-black text-white dark:bg-gray-200 dark:text-black rounded-lg cursor-pointer"
         onClick={handleClearCart}
       >
         Clear Cart
