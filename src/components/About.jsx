@@ -17,7 +17,7 @@ const About = () => {
           Home of your next favorite meal.
         </h2>
 
-        <img src="/pizza.png" className="w-96" alt="" />
+        <img src="/pizza.png" className="w-96" loading="lazy" alt="" />
       </div>
 
       {/* Profile Section */}
