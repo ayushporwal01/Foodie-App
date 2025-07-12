@@ -4,7 +4,7 @@
 
 @theme {
   --shadow-dark: 0 3px 10px rgb(0, 0, 0, 0.2);
-  --shadow-light: 0 3px 10px rgb(0, 0, 0, 0.1);
+  --shadow-light: 0 5px 10px rgb(0, 0, 0, 0.1);
 }
 
 @layer utilities {
@@ -39,7 +39,7 @@
 }
 
 .shimmer-card {
-  @apply w-60 h-68 bg-white rounded-lg shadow-light p-3 transition-all duration-300;
+  @apply w-60 h-68 bg-white shadow-light p-3 transition-all duration-300;
 }
 
 .shimmer-img {
