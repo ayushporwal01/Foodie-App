@@ -16,9 +16,12 @@ const RestaurantCard = (props) => {
       <img
         className="res-logo w-full h-44 object-cover p-3 rounded-2xl"
         src={CDN_URL + cloudinaryImageId}
+        loading="lazy"
       />
       <div className="res-info px-3">
-        <h3 className="res-name font-bold text-md text-gray-700 truncate">{name}</h3>
+        <h3 className="res-name font-bold text-md text-gray-700 truncate">
+          {name}
+        </h3>
         <h4 className="res-cuisine truncate text-xs text-gray-700">
           {cuisines.join(", ")}
         </h4>
@@ -32,7 +35,9 @@ const RestaurantCard = (props) => {
             {lastMileTravelString}
           </span>
           <span className="text-gray-700 text-lg">•</span>
-          <span className="font-bold text-gray-700 text-[12px]">{costForTwo}</span>
+          <span className="font-bold text-gray-700 text-[12px]">
+            {costForTwo}
+          </span>
         </div>
       </div>
     </div>
