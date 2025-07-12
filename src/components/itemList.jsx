@@ -21,7 +21,7 @@ const ItemsList = ({ items }) => {
               {/* Name */}
               {item?.card?.info?.name}
               {/* Price */}
-              <p className="font-semibold text-[16px] text-black">
+              <p className="font-semibold text-[16px] text-black dark:text-[#dbdbdb]">
                 ₹
                 {(item?.card?.info?.defaultPrice ?? item?.card?.info?.price) /
                   100}
