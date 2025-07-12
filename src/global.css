@@ -17,7 +17,7 @@
     );
     background-size: 1000px 100%;
     background-repeat: repeat;
-    animation: shimmer 1.5s ease-in-out infinite;
+    animation: shimmer 3s ease infinite;
   }
 
   @keyframes shimmer {
@@ -39,7 +39,7 @@
 }
 
 .shimmer-card {
-  @apply w-60 h-68 bg-white rounded-lg shadow-light p-3 animate-pulse transition-all duration-300;
+  @apply w-60 h-68 bg-white rounded-lg shadow-light p-3 transition-all duration-300;
 }
 
 .shimmer-img {
