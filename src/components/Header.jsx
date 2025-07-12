@@ -68,7 +68,7 @@ const Header = () => {
           {/* Online Status */}
           <span
             className={`text-sm select-none ${
-              onlineStatus ? "text-green-500" : "text-red-500"
+              onlineStatus ? "text-green-500" : "text-red-700"
             }`}
           >
             ●

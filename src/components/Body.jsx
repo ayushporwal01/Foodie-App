@@ -41,7 +41,7 @@ const Body = () => {
 
   if (!onlineStatus)
     return (
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center min-h-screen dark:bg-black dark:text-white">
         <h1 className="text-lg dark:text-white">
           Oops! Looks like you're offline. Check your internet connection.
         </h1>
