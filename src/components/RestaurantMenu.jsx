@@ -14,7 +14,7 @@ const RestaurantMenu = () => {
 
   if (resInfo === null)
     return (
-      <div className="pt-28">
+      <div className="pt-28 dark:bg-black">
         <Shimmer />;
       </div>
     );
