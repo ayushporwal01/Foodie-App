@@ -48,7 +48,7 @@ const RestaurantMenu = () => {
   console.log(categories);
 
   return (
-    <div className="text-center py-28 dark:bg-black relative -top-8">
+    <div className="min-h-screen relative -top-8 text-center py-28 dark:bg-black">
       {/* Menu Header */}
       <div className="w-[55%] bg-[#171717] flex mx-auto items-center gap-x-5 p-5">
         <img
