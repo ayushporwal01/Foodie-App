@@ -34,7 +34,7 @@ const ItemsList = ({ items }) => {
           </div>
 
           {/*Absolutely Positioned  */}
-          <div className="relative w-36 h-36 flex-shrink-0">
+          <div className="relative w-30 h-30 flex-shrink-0">
             {/* Item Image */}
             <img
               src={CDN_URL + item.card.info.imageId}
