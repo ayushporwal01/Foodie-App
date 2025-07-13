@@ -9,7 +9,7 @@ const About = () => {
     <div className="relative h-screen flex flex-col justify-center items-center overflow-hidden">
       {/* Initial Content */}
       <div
-        className={`absolute inset-0 flex flex-col items-center justify-center space-x-5 transition-transform duration-500 ease-in-out md:flex-row ${
+        className={`absolute inset-0 flex items-center justify-center space-x-5 transition-transform duration-500 ease-in-out ${
           showProfile ? "-translate-x-full" : "translate-x-0"
         }`}
       >
@@ -26,7 +26,7 @@ const About = () => {
           showProfile ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="bg-white rounded-2xl shadow-xl p-8 w-[60%] md:w-[40%] lg:w-[30%]  mx-auto text-center">
+        <div className="bg-white rounded-2xl shadow-xl p-8 w-[60%] lg:w-[30%]  mx-auto text-center">
           {/* GitHub Profile Image */}
           <img
             src="https://github.com/ayushporwal01.png"
@@ -35,8 +35,8 @@ const About = () => {
             alt="GitHub Avatar"
           />
           {/* Name + Tagline */}
-          <h2 className="text-3xl font-bold text-[#333] mb-1">Ayush Porwal</h2>
-          <p className="text-gray-600 text-lg">Frontend Developer</p>
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#333] mb-1">Ayush Porwal</h2>
+          <p className="text-gray-600 text-md md:text-lg ">Frontend Developer</p>
 
           {/* Social Links */}
           <div className="flex justify-center gap-6 mt-4 text-2xl text-[#444]">
@@ -99,7 +99,7 @@ const About = () => {
       </div>
 
       {/* Show Profile Button */}
-      <div className="absolute bottom-28">
+      <div className="absolute bottom-24">
         <button
           onClick={toggleProfile}
           className="px-4 py-2 bg-[#e08300] hover:bg-[#e08e00] text-md font-bold text-white rounded-full cursor-pointer"
