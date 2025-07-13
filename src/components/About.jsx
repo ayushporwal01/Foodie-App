@@ -13,8 +13,9 @@ const About = () => {
           showProfile ? "-translate-x-full" : "translate-x-0"
         }`}
       >
-        <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#555] text-center md:text-start font-bold">
-          Home of your<br/> next favorite meal.
+        <h2 className="flex flex-col text-4xl md:text-5xl lg:text-6xl text-[#555] font-bold leading-snug md:text-start ">
+          <span>Home of your</span>
+          <span>next favorite meal.</span>
         </h2>
 
         <img
@@ -100,7 +101,7 @@ const About = () => {
       </div>
 
       {/* Show Profile Button */}
-      <div className="absolute bottom-52">
+      <div className="absolute bottom-52 lg:bottom-32">
         <button
           onClick={toggleProfile}
           className="px-4 py-2 bg-[#e08300] hover:bg-[#e08e00] text-md font-bold text-white rounded-full cursor-pointer"
