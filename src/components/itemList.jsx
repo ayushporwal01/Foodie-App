@@ -14,7 +14,7 @@ const ItemsList = ({ items }) => {
       {items.map((item) => (
         <div
           key={item?.card?.info?.id}
-          className="m-2 p-2 border-b-2 border-gray-300 flex justify-between items-center gap-20"
+          className="m-2 p-2 border-b-2 border-gray-300 flex flex-col lg:flex-row justify-between items-center lg:gap-20 "
         >
           <div className="text-left">
             <div className="font-bold text-md text-[#555]">
@@ -28,7 +28,7 @@ const ItemsList = ({ items }) => {
               </p>
             </div>
             {/* Description */}
-            <p className="line-clamp-2 max-w-md text-[#555]">
+            <p className="lg:line-clamp-2  max-w-md text-[#555]">
               {item?.card?.info?.description}
             </p>
           </div>
