@@ -61,7 +61,7 @@ const RestaurantMenu = () => {
           src={CDN_URL + cloudinaryImageId}
           loading="lazy"
         />
-        
+
         {/* Right Part */}
         <div className="flex flex-col justify-start items-start">
           <h1 className="text-4xl text-[#dbdbdb]">{name}</h1>
