@@ -5,7 +5,7 @@ import { IoIosCall } from "react-icons/io";
 
 const BottomHeader = () => {
   return (
-    <div className="fixed bottom-0 left-0 w-full h-20 bg-white space-x-5 dark:bg-black border-t-1 dark:border-white  p-4 flex justify-around md:hidden z-50 shadow-t">
+    <div className="fixed bottom-0 left-0 w-full h-20 bg-white space-x-5  dark:bg-black shadow-top dark:border-t-1 dark:border-white  p-4 flex justify-around md:hidden z-50 shadow-t">
       {/* Navigation */}
       <ul className="flex justify-center items-center space-x-24">
         <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300]">
