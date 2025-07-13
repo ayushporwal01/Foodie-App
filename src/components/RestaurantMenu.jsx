@@ -55,10 +55,10 @@ const RestaurantMenu = () => {
   return (
     <div className="min-h-screen text-center pt-20">
       {/* Menu Header */}
-      <div className="w-[55%] bg-[#171717] flex mx-auto items-center gap-x-5 p-5">
+      <div className="w-full max-w-4xl bg-[#171717] flex mx-auto items-center gap-x-5 p-5">
         {/* Menu Image */}
         <img
-          className="res-logo w-64 h-40 object-cover rounded-md"
+          className="w-full md:w-64 h-40 object-cover rounded-md"
           src={CDN_URL + cloudinaryImageId}
           loading="lazy"
         />
