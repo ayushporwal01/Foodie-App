@@ -9,12 +9,12 @@ const About = () => {
     <div className="relative h-screen flex flex-col justify-center items-center overflow-hidden">
       {/* Initial Content */}
       <div
-        className={`absolute inset-0 flex flex-col  md:flex-row items-center justify-center space-y-5 md:space-x-5 transition-transform duration-500 ease-in-out ${
+        className={`absolute inset-0 flex flex-col md:flex-row justify-center items-center space-x-10 md:space-y-10 transition-transform duration-500 ease-in-out ${
           showProfile ? "-translate-x-full" : "translate-x-0"
         }`}
       >
-        <h2 className="text-3xl md:text-4xl lg:text-6xl w-[70%] md:w-[35%] text-[#555] text-center md:text-start font-bold leading-snug">
-          Home of your next favorite meal.
+        <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#555] text-center md:text-start font-bold">
+          Home of your<br/> next favorite meal.
         </h2>
 
         <img
