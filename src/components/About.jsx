@@ -17,7 +17,11 @@ const About = () => {
           Home of your next favorite meal.
         </h2>
 
-        <img src="/pizza.png" className="w-52 sm:w-64 md:w-72 lg:w-96" alt="Pizza Image" />
+        <img
+          src="/pizza.png"
+          className="w-52 sm:w-64 md:w-72 lg:w-96"
+          alt="Pizza Image"
+        />
       </div>
 
       {/* Profile Section */}
@@ -35,8 +39,12 @@ const About = () => {
             alt="GitHub Avatar"
           />
           {/* Name + Tagline */}
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#333] mb-1">Ayush Porwal</h2>
-          <p className="text-gray-600 text-md md:text-lg ">Frontend Developer</p>
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#333] mb-1">
+            Ayush Porwal
+          </h2>
+          <p className="text-gray-600 text-md md:text-lg ">
+            Frontend Developer
+          </p>
 
           {/* Social Links */}
           <div className="flex justify-center gap-6 mt-4 text-xl lg:text-2xl text-[#444]">
@@ -79,27 +87,20 @@ const About = () => {
 
           {/* Skills */}
           <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <span className="bg-gray-100 text-sm px-3 py-1 rounded-full">
-              HTML
-            </span>
-            <span className="bg-gray-100 text-sm px-3 py-1 rounded-full">
-              CSS
-            </span>
-            <span className="bg-gray-100 text-sm px-3 py-1 rounded-full">
-              JavaScript
-            </span>
-            <span className="bg-gray-100 text-sm px-3 py-1 rounded-full">
-              Tailwind
-            </span>
-            <span className="bg-gray-100 text-sm px-3 py-1 rounded-full">
-              React
-            </span>
+            {["HTML", "CSS", "JavaScript", "Tailwind", "React"].map((skill) => (
+              <span
+                key={skill}
+                className="bg-gray-100 text-sm px-3 py-1 rounded-full"
+              >
+                {skill}
+              </span>
+            ))}
           </div>
         </div>
       </div>
 
       {/* Show Profile Button */}
-      <div className="absolute bottom-24 md:bottom-72 lg:bottom-24">
+      <div className="absolute bottom-52">
         <button
           onClick={toggleProfile}
           className="px-4 py-2 bg-[#e08300] hover:bg-[#e08e00] text-md font-bold text-white rounded-full cursor-pointer"
