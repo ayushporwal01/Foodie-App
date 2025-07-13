@@ -50,7 +50,6 @@ const RestaurantMenu = () => {
       c.card?.card?.["@type"] ===
       "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
   );
-  console.log(categories);
 
   return (
     <div className="min-h-screen text-center pt-20">
@@ -70,7 +69,7 @@ const RestaurantMenu = () => {
 
           <div className="flex items-center gap-5 pt-2">
             <span className="res-ratings px-2 py-1 bg-[#006711] text-sm text-white font-bold rounded flex items-center gap-1.5">
-              <i class="fa-solid fa-star text-sm"></i> {avgRating}
+              <i className="fa-solid fa-star text-sm"></i> {avgRating}
             </span>
             <span className="text-white text-sm font-bold">|</span>
             <span className="text-sm text-white font-bold">{deliveryTime}</span>
