@@ -9,11 +9,11 @@ const About = () => {
     <div className="relative h-screen flex flex-col justify-center items-center overflow-hidden">
       {/* Initial Content */}
       <div
-        className={`absolute inset-0 flex flex-col md:flex-row justify-center items-center space-x-10 md:space-y-10 transition-transform duration-500 ease-in-out ${
+        className={`absolute inset-0 flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-x-10 mb-24 md:mb-52 transition-transform duration-500 ease-in-out ${
           showProfile ? "-translate-x-full" : "translate-x-0"
         }`}
       >
-        <h2 className="flex flex-col text-4xl md:text-5xl lg:text-6xl text-[#555] font-bold leading-snug md:text-start ">
+        <h2 className="flex flex-col items-center text-4xl md:text-5xl lg:text-6xl text-[#555] font-bold leading-snug">
           <span>Home of your</span>
           <span>next favorite meal.</span>
         </h2>
