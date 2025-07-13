@@ -101,7 +101,7 @@ const About = () => {
       </div>
 
       {/* Show Profile Button */}
-      <div className="absolute bottom-52 lg:bottom-32">
+      <div className="absolute bottom-24 md:bottom-56 lg:bottom-32">
         <button
           onClick={toggleProfile}
           className="px-4 py-2 bg-[#e08300] hover:bg-[#e08e00] text-md font-bold text-white rounded-full cursor-pointer"
@@ -109,7 +109,7 @@ const About = () => {
           {showProfile ? "Hide Profile" : "Show Profile"}
         </button>
       </div>
-    </div>
+    </div>  
   );
 };
 
