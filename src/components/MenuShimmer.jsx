@@ -1,3 +1,14 @@
+const ShimmerItem = () => (
+  <div className="item-card">
+    <div className="item-text-block">
+      <div className="item-line-md animate-shimmer"></div>
+      <div className="item-line-sm animate-shimmer"></div>
+      <div className="item-line-lg animate-shimmer"></div>
+    </div>
+    <div className="item-image animate-shimmer"></div>
+  </div>
+);
+
 const MenuShimmer = () => {
   return (
     <div className="min-h-screen flex flex-col items-center">
@@ -15,7 +26,7 @@ const MenuShimmer = () => {
             <div className="w-[40%] h-4 bg-[#adadad] animate-shimmer"></div>
           </div>
         </div>
-      </div>  
+      </div>
 
       {/* Menu */}
       <div className="w-full max-w-3xl h-50 flex flex-col justify-start pt-10">
@@ -26,14 +37,9 @@ const MenuShimmer = () => {
         </div>
 
         {/* Items */}
-        <div className="item-card">
-          <div className="item-text-block">
-            <div className="item-line-md animate-shimmer"></div>
-            <div className="item-line-sm animate-shimmer"></div>
-            <div className="item-line-lg animate-shimmer"></div>
-          </div>
-          <div className="item-image animate-shimmer"></div>
-        </div>
+        {[...Array(10)].map((_, i) => (
+          <ShimmerItem key={i} />
+        ))}
       </div>
     </div>
   );
