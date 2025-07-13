@@ -28,7 +28,7 @@ const RestaurantCard = (props) => {
         <h4 className="res-location text-xs text-gray-700 dark:text-[#ddd]">{areaName}</h4>
         <div className="space-x-2 flex items-center gap-1 py-2">
           <span className="res-ratings px-1 py-0.5  bg-[#00ad1d] text-[12px] text-white font-semibold rounded flex items-center gap-1">
-            <i class="fa-solid fa-star text-[8px]"></i> {avgRating}
+            <i className="fa-solid fa-star text-[8px]"></i> {avgRating}
           </span>
           <span className="text-gray-700 text-lg dark:text-[#ddd]">•</span>
           <span className="font-semibold text-gray-700 text-[12px] dark:text-[#ddd]">
