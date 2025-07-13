@@ -2,7 +2,7 @@ const Contact = () => {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="w-[450px] h-[450px] flex flex-col justify-center items-center space-y-10">
-        <h1 className="text-center text-4xl text-[#555] font-bold">
+        <h1 className="text-center text-2xl lg:text-3xl text-[#555] font-bold">
           Contact Us
         </h1>
 
