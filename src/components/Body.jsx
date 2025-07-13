@@ -1,4 +1,4 @@
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
@@ -49,7 +49,7 @@ const Body = () => {
     );
 
   return (
-    <div className="body flex flex-col justify-center items-center py-24 dark:bg-black dark:text-white">
+    <div className="body flex flex-col justify-center items-center py-24 dark:text-white">
       {/* Search Bar - Always Visible */}
       <div className="filter flex justify-center gap-5 m-5">
         <div className="search flex items-center">

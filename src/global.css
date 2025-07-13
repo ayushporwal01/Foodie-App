@@ -56,7 +56,7 @@ body {
 }
 
 .shimmer-line-short {
-  @apply h-4 w-[80%] bg-[#ddd] dark:bg-fuchsia-600 ;
+  @apply h-4 w-[80%] bg-[#ddd];
 }
 
 .shimmer-tags {
