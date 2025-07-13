@@ -38,13 +38,13 @@ const ItemsList = ({ items }) => {
             {/* Item Image */}
             <img
               src={CDN_URL + item.card.info.imageId}
-              className="w-24 h-24 lg:w-30 lg:h-30 rounded-xl mt-2"
+              className="w-24 h-24 lg:w-30 lg:h-30 rounded-xl my-3 lg:my-0"
               alt={item?.card?.info?.name}
               loading="lazy"
             />
             {/* ADD button */}
             <button
-              className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-8 lg:w-28 lg:h-10 text-lg font-bold uppercase border border-gray-400 rounded-[8px] text-green-600 bg-white shadow-[0px_0px_2px_2px_rgba(0,0,0,0.1)]  hover:bg-gray-200 transition-all duration-200 ease-in-out cursor-pointer"
+              className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-20 h-8 lg:w-28 lg:h-10 text-lg font-bold uppercase border border-gray-400 rounded-[8px] text-green-600 bg-white shadow-[0px_0px_2px_2px_rgba(0,0,0,0.1)]  hover:bg-gray-200 transition-all duration-200 ease-in-out cursor-pointer"
               onClick={(e) => {
                 e.stopPropagation();
                 handleAddItem(item);
