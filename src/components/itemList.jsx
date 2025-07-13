@@ -14,7 +14,7 @@ const ItemsList = ({ items }) => {
       {items.map((item) => (
         <div
           key={item?.card?.info?.id}
-          className="m-2 p-2 border-b-2 border-gray-300 flex flex-col lg:flex-row justify-between items-center lg:gap-20 "
+          className="m-2 p-2 border-b-2 border-gray-300 flex flex-col lg:flex-row items-start lg:justify-between lg:items-center"
         >
           <div className="text-left">
             <div className="font-bold text-md text-[#555]">
@@ -34,7 +34,7 @@ const ItemsList = ({ items }) => {
           </div>
 
           {/*Absolutely Positioned  */}
-          <div className="relative w-30 h-30 flex-shrink-0">
+          <div className="relative w-30 h-30">
             {/* Item Image */}
             <img
               src={CDN_URL + item.card.info.imageId}
