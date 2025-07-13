@@ -26,7 +26,7 @@ const About = () => {
           showProfile ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="bg-white rounded-2xl shadow-xl p-8 w-[60%] lg:w-[30%]  mx-auto text-center">
+        <div className="bg-white rounded-2xl shadow-xl p-8 w-[80%] md:w-[60%] lg:w-[30%]  mx-auto text-center">
           {/* GitHub Profile Image */}
           <img
             src="https://github.com/ayushporwal01.png"
