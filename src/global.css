@@ -68,7 +68,7 @@ body {
 }
 
 .item-card {
-  @apply flex justify-between items-center gap-5 bg-white shadow-light mt-10 p-6;
+  @apply flex justify-between items-center gap-5 bg-white dark:bg-[#1f1f1f] shadow-light mt-10 p-6;
 }
 
 .item-text-block {

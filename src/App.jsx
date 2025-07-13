@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
+import BottomHeader from "./components/BottomHeader";
 
 function AppLayout() {
   const [username, setUsername] = useState("");
@@ -21,6 +22,7 @@ function AppLayout() {
           <main>
             <Outlet />
           </main>
+          <BottomHeader />
         </div>
       </UserContext.Provider>
     </Provider>

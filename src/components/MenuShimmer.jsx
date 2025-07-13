@@ -2,7 +2,7 @@ const MenuShimmer = () => {
   return (
     <div className="min-h-screen flex flex-col items-center">
       {/* Header */}
-      <div className="w-[55%] h-50 bg-gray-200 flex justify-start items-center p-4 gap-x-5">
+      <div className="w-[55%] h-50 bg-gray-200 dark:bg-[#1f1f1f]  flex justify-start items-center p-4 gap-x-5">
         {/* Image */}
         <div className="w-64 h-40 border border-[#adadad] rounded-sm animate-shimmer"></div>
         {/* Lines */}
