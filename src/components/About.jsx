@@ -17,7 +17,7 @@ const About = () => {
           Home of your next favorite meal.
         </h2>
 
-        <img src="/pizza.png" className="w-64 md:w-72 lg:w-96" alt="Pizza Image" />
+        <img src="/pizza.png" className="w-52 sm:w-64 md:w-72 lg:w-96" alt="Pizza Image" />
       </div>
 
       {/* Profile Section */}
@@ -26,7 +26,7 @@ const About = () => {
           showProfile ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="bg-white rounded-2xl shadow-xl p-8 w-[90%] max-w-lg mx-auto text-center">
+        <div className="bg-white rounded-2xl shadow-xl p-8 w-[60%] md:w-[40%] lg:w-[30%]  mx-auto text-center">
           {/* GitHub Profile Image */}
           <img
             src="https://github.com/ayushporwal01.png"
