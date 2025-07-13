@@ -26,11 +26,11 @@ const About = () => {
           showProfile ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="bg-white rounded-2xl shadow-xl p-8 w-[80%] md:w-[60%] lg:w-[30%]  mx-auto text-center">
+        <div className="w-[30vw] h-[43vh] bg-white rounded-2xl shadow-xl flex flex-col justify-center items-center">
           {/* GitHub Profile Image */}
           <img
             src="https://github.com/ayushporwal01.png"
-            className="h-30 rounded-full mx-auto mb-4 border-2 border-gray-300"
+            className="h-20 md:h-24 rounded-full mx-auto mb-4 border-2 border-gray-300"
             loading="lazy"
             alt="GitHub Avatar"
           />
@@ -39,7 +39,7 @@ const About = () => {
           <p className="text-gray-600 text-md md:text-lg ">Frontend Developer</p>
 
           {/* Social Links */}
-          <div className="flex justify-center gap-6 mt-4 text-2xl text-[#444]">
+          <div className="flex justify-center gap-6 mt-4 text-xl lg:text-2xl text-[#444]">
             <a
               href="https://github.com/ayushporwal01"
               target="_blank"

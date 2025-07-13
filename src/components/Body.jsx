@@ -13,22 +13,37 @@ const Body = () => {
 
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
+  // Function that returns the right Swiggy API URL based on screen size
+  const getSwiggyApiUrl = () => {
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+      return `https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=22.7195687&lng=75.8577258&carousel=true&third_party_vendor=1`;
+    } else {
+      return `https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.7195687&lng=75.8577258&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`;
+    }
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
     try {
-      const data = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=22.7195687&lng=75.8577258&carousel=true&third_party_vendor=1"
-      );
+      const data = await fetch(getSwiggyApiUrl());
 
       const json = await data.json();
-      console.log(json);
+      console.log("Swiggy response:", json);
+
+      const restaurantCard = json?.data?.cards?.find(
+        (card) => card?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      );
 
       const restaurants =
-        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants || [];
+        restaurantCard?.card?.card?.gridElements?.infoWithStyle?.restaurants ||
+        [];
+
+      console.log("Restaurants loaded:", restaurants.length);
 
       setListOfRestaurant(restaurants);
       setFilteredRestaurant(restaurants);
