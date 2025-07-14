@@ -66,7 +66,7 @@ const Header = () => {
 
         <div className="flex items-center space-x-4">
           {/* Login / Logout Button */}
-          <button className="login-btn px-1.5 py-0.5 md:px-3.5 md:py-1 bg-[#e08300] text-white font-medium rounded-md hover:bg-[#f08c00] transition-all ease-in cursor-pointer">
+          <button className="login-btn px-3.5 py-1 bg-[#e08300] text-white font-medium rounded-md hover:bg-[#f08c00] transition-all ease-in cursor-pointer">
             Login
           </button>
 
