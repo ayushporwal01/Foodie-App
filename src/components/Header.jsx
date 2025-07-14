@@ -32,14 +32,12 @@ const Header = () => {
   };
 
   return (
-    <div className="header h-16 md:h-20 flex justify-between items-center px-6 gap-6 bg-white dark:bg-black border-b fixed top-0 left-0 right-0 z-50 dark:text-white ">
-      <div className="logo-container shrink-0">
-        <img
-          className="logo w-[70px] md:w-[85px] md:ml-5"
-          src="/foodie2.png"
-          alt="Food Logo"
-        />
-      </div>
+    <div className="header h-16 md:h-20 flex justify-between items-center px-6 gap-6 bg-white dark:bg-black border-b fixed top-0 left-0 right-0 z-50 dark:text-white">
+      <img
+        className="logo w-[70px] md:w-[85px] md:ml-5 shrink-0"
+        src="/foodie2.png"
+        alt="Food Logo"
+      />
       <div className="nav-items flex items-center space-x-8 md:space-x-10">
         {/* Navigation */}
         <ul className="flex space-x-10">
@@ -81,25 +79,27 @@ const Header = () => {
           </span>
         </div>
 
-        {/* Dark Mode Toggle with Smooth Transition */}
-        <button
-          onClick={toggleDarkMode}
-          className="text-xl transition-all duration-300 ease-in-out hover:text-[#e08300]"
-        >
-          <span
-            className={`inline-block transform transition-all duration-300 ${
-              darkMode === "dark"
-                ? "rotate-0 scale-100"
-                : "rotate-180 scale-110"
-            }`}
+        {/* Dark Mode Toggle */}
+        <div className="-ml-3 md:-ml-5">
+          <button
+            onClick={toggleDarkMode}
+            className="text-xl transition-all duration-300 ease-in-out hover:text-[#e08300]"
           >
-            {darkMode === "dark" ? (
-              <FaMoon className="text-white" />
-            ) : (
-              <FaSun className="text-yellow-500" />
-            )}
-          </span>
-        </button>
+            <span
+              className={`inline-block transform transition-all duration-300 ${
+                darkMode === "dark"
+                  ? "rotate-0 scale-100"
+                  : "rotate-180 scale-110"
+              }`}
+            >
+              {darkMode === "dark" ? (
+                <FaMoon className="text-white" />
+              ) : (
+                <FaSun className="text-yellow-500" />
+              )}
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   );
