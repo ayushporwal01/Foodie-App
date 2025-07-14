@@ -35,10 +35,6 @@ const About = () => {
           {/* GitHub Profile Image */}
           <img
             src="https://github.com/ayushporwal01.png"
-            onError={(e) => {
-              e.currentTarget.onerror = null; // prevent infinite loop
-              e.currentTarget.src = "/dummy-profile.png"; // fallback image
-            }}
             className="h-20 md:h-24 rounded-full mx-auto mb-4 border-2 border-gray-300"
             loading="lazy"
             alt="GitHub Avatar"
