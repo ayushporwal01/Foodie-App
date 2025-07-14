@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
-import UserContext from "./utils/UserContext";
-import { Provider, useSelector } from "react-redux";
+import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import BottomHeader from "./components/BottomHeader";
 import CartSync from "./utils/CartSync";
@@ -9,14 +8,14 @@ import CartSync from "./utils/CartSync";
 function AppLayout() {
   return (
     <Provider store={appStore}>
-        <div className="app">
-          <Header />
-          <main>
-            <Outlet />
-          </main>
-          <BottomHeader />
-          <CartSync />
-        </div>
+      <div className="app">
+        <Header />
+        <main>
+          <Outlet />
+        </main>
+        <BottomHeader />
+        <CartSync />
+      </div>
     </Provider>
   );
 }
