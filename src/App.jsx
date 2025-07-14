@@ -1,18 +1,12 @@
 import { Outlet } from "react-router-dom";
-import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import UserContext from "./utils/UserContext";
 import { Provider, useSelector } from "react-redux";
 import appStore from "./utils/appStore";
 import BottomHeader from "./components/BottomHeader";
+import CartSync from "./utils/CartSync";
 
 function AppLayout() {
-  const cartItems = useSelector((store) => store.cart.items);
-
-  useEffect(() => {
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  }, [cartItems]);
-
   return (
     <Provider store={appStore}>
       <UserContext.Provider value={{ loggedInUser: username, setUsername }}>
@@ -22,6 +16,7 @@ function AppLayout() {
             <Outlet />
           </main>
           <BottomHeader />
+          <CartSync />
         </div>
       </UserContext.Provider>
     </Provider>
