@@ -31,8 +31,6 @@ const cartSlice = createSlice({
           state.items = state.items.filter((i) => i.id !== itemId);
         }
       }
-      // remove item if quantity = 1 and user clicks minus
-      state.items = state.items.filter((i) => i.id !== itemId);
     },
 
     clearCart: (state) => {
