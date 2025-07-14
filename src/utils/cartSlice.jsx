@@ -14,19 +14,33 @@ const cartSlice = createSlice({
       const item = action.payload;
       const existingItem = state.items.find((i) => i.id === item.id);
 
-      if(existingItem) {
+      if (existingItem) {
         existingItem.quantity += 1;
       } else {
-        state.items.push({...item, quantity: 1});
+        state.items.push({ ...item, quantity: 1 });
       }
     },
 
+    decrementItem: (state, action) => {
+      const itemId = action.payload;
+      const existingItem = state.items.find((i) => i.id === itemId);
+      if (existingItem) {
+        if (existingItem > 1) {
+          existingItem.quantity -= 1;
+        } else {
+          state.items = state.items.filter((i) => i.id !== itemId);
+        }
+      }
+      // remove item if quantity = 1 and user clicks minus
+      state.items = state.items.filter((i) => i.id !== itemId);
+    },
+
     clearCart: (state) => {
-      state.items.length = 0;
+      state.items = []; //Resets the array
     },
   },
 });
 
-export const { addItem, removeItem, clearCart } = cartSlice.actions;
+export const { addItem, decrementItem, clearCart } = cartSlice.actions;
 
 export default cartSlice.reducer;

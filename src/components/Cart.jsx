@@ -21,7 +21,7 @@ const Cart = () => {
       </button>
       {cartItems.length > 0 ? (
         <div className="md:w-6/12 mx-auto p-5 mt-4">
-          <ItemsList items={cartItems} />
+          <ItemsList items={cartItems} showQuantityControls={true} />
         </div>
       ) : (
         <div className="h-[calc(100vh-400px)] flex justify-center items-center">
