@@ -40,7 +40,7 @@ const Header = () => {
           alt="Food Logo"
         />
       </div>
-      <div className="nav-items flex items-center space-x-6 md:space-x-10">
+      <div className="nav-items flex items-center space-x-8 md:space-x-10">
         {/* Navigation */}
         <ul className="flex space-x-10">
           <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300] hidden md:block">
@@ -84,7 +84,7 @@ const Header = () => {
         {/* Dark Mode Toggle with Smooth Transition */}
         <button
           onClick={toggleDarkMode}
-          className="text-xl mr-2 md:ml-4 transition-all duration-300 ease-in-out hover:text-[#e08300]"
+          className="text-xl transition-all duration-300 ease-in-out hover:text-[#e08300]"
         >
           <span
             className={`inline-block transform transition-all duration-300 ${
