@@ -34,6 +34,7 @@ const ItemsList = ({ items }) => {
               </p>
             </div>
 
+            {/* Quantity */}
             <div className="flex space-x-4 mx-3 my-4">
               <button className="text-xl rounded-sm cursor-pointer">-</button>
               <span className="text-lg">5</span>
