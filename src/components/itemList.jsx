@@ -55,8 +55,7 @@ const ItemsList = ({ items, showQuantityControls = false }) => {
                 {itemInfo?.description}
               </p>
             </div>
-
-            {/*Absolutely Positioned  */}
+            
             <div className="relative">
               {/* Item Image */}
               <img
