@@ -33,12 +33,13 @@ const Header = () => {
 
   return (
     <div className="header h-16 md:h-20 flex justify-between items-center px-6 gap-6 bg-white dark:bg-black border-b fixed top-0 left-0 right-0 z-50 dark:text-white">
+      {/* Logo */}
       <img
         className="logo w-[70px] md:w-[85px] md:ml-5 shrink-0"
         src="/foodie2.png"
         alt="Food Logo"
       />
-      <div className="nav-items flex items-center space-x-8 md:space-x-10">
+      <div className="nav-items flex items-center space-x-8 md:space-x-10 mr-3">
         {/* Navigation */}
         <ul className="flex space-x-10">
           <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300] hidden md:block">
@@ -83,7 +84,7 @@ const Header = () => {
         <div className="-ml-3 md:-ml-5">
           <button
             onClick={toggleDarkMode}
-            className="text-xl transition-all duration-300 ease-in-out hover:text-[#e08300]"
+            className="text-xl transition-all duration-300 ease-in-out hover:text-[#e08300] mt-1"
           >
             <span
               className={`inline-block transform transition-all duration-300 ${
