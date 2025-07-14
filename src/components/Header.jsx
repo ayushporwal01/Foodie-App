@@ -40,7 +40,7 @@ const Header = () => {
           alt="Food Logo"
         />
       </div>
-      <div className="nav-items flex items-center space-x-10">
+      <div className="nav-items flex items-center space-x-6 md:space-x-10">
         {/* Navigation */}
         <ul className="flex space-x-10">
           <li className="font-medium text-gray-700 dark:text-white hover:text-[#e08300] hidden md:block">
@@ -67,7 +67,7 @@ const Header = () => {
 
         <div className="flex items-center space-x-4">
           {/* Login / Logout Button */}
-          <button className="login-btn px-3.5 py-1 bg-[#e08300] text-white font-medium rounded-md hover:bg-[#f08c00] transition-all ease-in cursor-pointer">
+          <button className="login-btn px-1.5 py-0.5 md:px-3.5 md:py-1 bg-[#e08300] text-white font-medium rounded-md hover:bg-[#f08c00] transition-all ease-in cursor-pointer">
             Login
           </button>
 
@@ -81,16 +81,24 @@ const Header = () => {
           </span>
         </div>
 
-        {/* Dark Mode Toggle */}
+        {/* Dark Mode Toggle with Smooth Transition */}
         <button
           onClick={toggleDarkMode}
-          className="text-xl ml-2 transition-colors duration-300 hover:text-[#e08300] md:ml-4"
+          className="text-xl mr-2 md:ml-4 transition-all duration-300 ease-in-out hover:text-[#e08300]"
         >
-          {darkMode === "dark" ? (
-            <FaMoon className="text-white" />
-          ) : (
-            <FaSun className="text-yellow-500" />
-          )}
+          <span
+            className={`inline-block transform transition-all duration-300 ${
+              darkMode === "dark"
+                ? "rotate-0 scale-100"
+                : "rotate-180 scale-110"
+            }`}
+          >
+            {darkMode === "dark" ? (
+              <FaMoon className="text-white" />
+            ) : (
+              <FaSun className="text-yellow-500" />
+            )}
+          </span>
         </button>
       </div>
     </div>
