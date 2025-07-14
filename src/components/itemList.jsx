@@ -30,10 +30,15 @@ const ItemsList = ({ items, showQuantityControls = false }) => {
                   ₹{(itemInfo?.defaultPrice ?? itemInfo?.price) / 100}
                 </p>
 
+                {/* Description */}
+                <p className="lg:line-clamp-2  max-w-md text-[#555]">
+                  {itemInfo?.description}
+                </p>
+
                 {showQuantityControls && (
-                  <div className="flex items-center space-x-4 mt-3">
+                  <div className="flex items-center space-x-4 p-2 my-3">
                     <button
-                      className="text-xl px-3 py-1 border rounded hover:bg-gray-100"
+                      className="text-xl px-4 py-1 border rounded hover:bg-gray-100"
                       onClick={() => dispatch(decrementItem(itemId))}
                     >
                       -
@@ -50,12 +55,8 @@ const ItemsList = ({ items, showQuantityControls = false }) => {
                   </div>
                 )}
               </div>
-              {/* Description */}
-              <p className="lg:line-clamp-2  max-w-md text-[#555]">
-                {itemInfo?.description}
-              </p>
             </div>
-            
+
             <div className="relative">
               {/* Item Image */}
               <img
