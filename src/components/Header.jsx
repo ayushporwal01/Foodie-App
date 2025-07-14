@@ -33,10 +33,10 @@ const Header = () => {
   };
 
   return (
-    <div className="header h-20 flex justify-between items-center px-6  bg-white dark:bg-black border-b fixed top-0 left-0 right-0 z-50 dark:text-white ">
-      <div className="logo-container">
+    <div className="header h-16 md:h-20 flex justify-between items-center px-6 gap-6 bg-white dark:bg-black border-b fixed top-0 left-0 right-0 z-50 dark:text-white ">
+      <div className="logo-container shrink-0">
         <img
-          className="logo w-[80px] md:w-[85px] ml-5 shrink-0"
+          className="logo w-[70px] md:w-[85px] md:ml-5"
           src="/foodie2.png"
           alt="Food Logo"
         />
