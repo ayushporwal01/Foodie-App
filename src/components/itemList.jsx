@@ -19,7 +19,7 @@ const ItemsList = ({ items, showQuantityControls = false }) => {
         return (
           <div
             key={itemId}
-            className="m-2 p-2 border-b-2 border-gray-300 flex flex-col lg:flex-row items-start lg:justify-between lg:items-center"
+            className="m-2 p-2 border-b-2 border-gray-300 flex flex-col lg:flex-row justify-between items-start lg:items-center "
           >
             <div className="text-left">
               <div className="font-bold text-md text-[#555]">
@@ -31,7 +31,7 @@ const ItemsList = ({ items, showQuantityControls = false }) => {
                 </p>
 
                 {/* Description */}
-                <p className="lg:line-clamp-2  max-w-md text-[#555]">
+                <p className="max-w-md lg:line-clamp-2 text-sm text-[#555] font-normal opacity-70">
                   {itemInfo?.description}
                 </p>
 

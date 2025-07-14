@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import ItemsList from "./itemList";
 import { clearCart } from "../utils/cartSlice";
+import OrderSummary from "./OrderSummary";
 
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
@@ -20,8 +21,9 @@ const Cart = () => {
         Clear Cart
       </button>
       {cartItems.length > 0 ? (
-        <div className="md:w-6/12 mx-auto p-5 mt-4">
+        <div className="flex mx-auto md:w-6/12 p-5 mt-4">
           <ItemsList items={cartItems} showQuantityControls={true} />
+      
         </div>
       ) : (
         <div className="h-[calc(100vh-400px)] flex justify-center items-center">
