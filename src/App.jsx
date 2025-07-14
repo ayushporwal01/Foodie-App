@@ -7,13 +7,7 @@ import appStore from "./utils/appStore";
 import BottomHeader from "./components/BottomHeader";
 
 function AppLayout() {
-  const [username, setUsername] = useState("");
-  useEffect(() => {
-    const data = {
-      name: "Ayush Porwal",
-    };
-    setUsername(data.name);
-  }, []);
+
   return (
     <Provider store={appStore}>
       <UserContext.Provider value={{ loggedInUser: username, setUsername }}>
