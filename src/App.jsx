@@ -9,7 +9,6 @@ import CartSync from "./utils/CartSync";
 function AppLayout() {
   return (
     <Provider store={appStore}>
-      <UserContext.Provider value={{ loggedInUser: username, setUsername }}>
         <div className="app">
           <Header />
           <main>
@@ -18,7 +17,6 @@ function AppLayout() {
           <BottomHeader />
           <CartSync />
         </div>
-      </UserContext.Provider>
     </Provider>
   );
 }
