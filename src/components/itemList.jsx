@@ -36,7 +36,7 @@ const ItemsList = ({ items, showQuantityControls = false }) => {
                 </p>
 
                 {showQuantityControls && (
-                  <div className="flex items-center space-x-4 p-2 my-3">
+                  <div className="flex items-center space-x-4 md:p-2 pt-2 md:pt-0 my-3">
                     <button
                       className="text-xl px-4 py-1 border rounded hover:bg-gray-100"
                       onClick={() => dispatch(decrementItem(itemId))}
