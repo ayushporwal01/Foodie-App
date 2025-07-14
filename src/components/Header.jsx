@@ -1,7 +1,6 @@
 import { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import ReactSwitch from "react-switch";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
 import { useSelector } from "react-redux";
@@ -83,20 +82,16 @@ const Header = () => {
         </div>
 
         {/* Dark Mode Toggle */}
-        <ReactSwitch
-          onChange={toggleDarkMode}
-          checked={darkMode === "dark"}
-          checkedIcon={
-            <div className="flex items-center justify-center h-full pl-1 text-white text-xs">
-              <FaMoon size={12} />
-            </div>
-          }
-          uncheckedIcon={
-            <div className="flex items-center justify-center h-full pl-1 text-yellow-500 text-xs">
-              <FaSun size={12} />
-            </div>
-          }
-        />
+        <button
+          onClick={toggleDarkMode}
+          className="text-xl ml-2 transition-colors duration-300 hover:text-[#e08300] md:ml-4"
+        >
+          {darkMode === "dark" ? (
+            <FaMoon className="text-white" />
+          ) : (
+            <FaSun className="text-yellow-500" />
+          )}
+        </button>
       </div>
     </div>
   );
