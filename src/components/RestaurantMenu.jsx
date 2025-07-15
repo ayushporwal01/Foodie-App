@@ -52,7 +52,7 @@ const RestaurantMenu = () => {
   );
 
   return (
-    <div className="min-h-screen text-center pt-14 md:pt-20">
+    <div className="min-h-screen text-center py-14 md:py-20">
       {/* Menu Header */}
       <div className="w-full max-w-[52rem] bg-[#171717] flex flex-col lg:flex-row mx-auto items-start space-x-5 space-y-5 lg:space-y-0 p-5">
         {/* Menu Image */}
