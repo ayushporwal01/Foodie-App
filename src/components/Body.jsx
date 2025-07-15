@@ -8,8 +8,9 @@ const Body = () => {
   //Local State Variable - Superpowerful React Variable
   const [ListOfRestaurants, setListOfRestaurant] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
-
   const [searchText, setSearchText] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
@@ -24,7 +25,6 @@ const Body = () => {
       );
 
       const json = await data.json();
-      console.log(json);
 
       const restaurants =
         json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
@@ -33,7 +33,9 @@ const Body = () => {
       setListOfRestaurant(restaurants);
       setFilteredRestaurant(restaurants);
     } catch (err) {
-      console.error("Failed to fetch restaurants: ", err);
+      setError("Something went wrong while loading restaurants.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -80,7 +82,9 @@ const Body = () => {
       </div>
 
       {/* Restaurant Card or Shimmer */}
-      {ListOfRestaurants.length === 0 ? (
+      {error ? (
+        <div className="text-red-500">{error}</div>
+      ) : loading ? (
         <Shimmer />
       ) : (
         <div className="res-container flex flex-wrap justify-center gap-10 py-4">
