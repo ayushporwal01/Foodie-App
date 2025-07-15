@@ -13,16 +13,18 @@ const Body = () => {
   const [error, setError] = useState(null);
 
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
+  const onlineStatus = useOnlineStatus();
 
+  // Fetches restaurant data from API
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
     try {
-      const data = await fetch("/api/restaurants");
+      const response = await fetch("/api/restaurants");
 
-      const json = await data.json();
+      const json = await response.json();
 
       const restaurants =
         json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
@@ -38,7 +40,17 @@ const Body = () => {
     }
   };
 
-  const onlineStatus = useOnlineStatus();
+  //Debounce search effect
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const filtered = ListOfRestaurants.filter((res) =>
+        res?.info?.name.toLowerCase().includes(searchText.toLowerCase())
+      );
+      setFilteredRestaurant(filtered);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, [searchText, ListOfRestaurants]);
 
   if (!onlineStatus)
     return (
