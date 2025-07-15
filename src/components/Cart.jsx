@@ -22,7 +22,7 @@ const Cart = () => {
       {cartItems.length > 0 ? (
         <div className="mx-auto md:w-6/12 p-5 mt-4">
           <ItemsList items={cartItems} showQuantityControls={true} />
-          /* Checkout */
+          {/* Checkout */}
           <div className="my-5">
             <button className="px-4 py-1 text-lg bg-black text-white dark:bg-white dark:text-black transition-all duration-200 ease-in-out rounded-full cursor-pointer">
               Checkout
