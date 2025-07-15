@@ -15,16 +15,20 @@ const Cart = () => {
     <div className="min-h-screen text-center pt-32">
       <h1 className="text-4xl font-bold  text-[#555]">Cart</h1>
       <button
-        className="mt-2 px-2 py-1 bg-black text-white dark:bg-gray-200 dark:text-black rounded-lg cursor-pointer"
+        className="mt-2 px-2 py-1 bg-black text-white dark:bg-white dark:text-black rounded-lg transition-all duration-200 ease-in-out cursor-pointer"
         onClick={handleClearCart}
       >
         Clear Cart
       </button>
       {cartItems.length > 0 ? (
-        <div className=" mx-auto md:w-6/12 p-5 mt-4">
+        <div className="mx-auto md:w-6/12 p-5 mt-4">
           <ItemsList items={cartItems} showQuantityControls={true} />
-
-          <OrderSummary />
+          /* Checkout */
+          <div className="my-5">
+            <button className="px-4 py-1 text-lg bg-black text-white dark:bg-white dark:text-black transition-all duration-200 ease-in-out rounded-full cursor-pointer">
+              Checkout
+            </button>
+          </div>
         </div>
       ) : (
         <div className="h-[calc(100vh-400px)] flex justify-center items-center">
