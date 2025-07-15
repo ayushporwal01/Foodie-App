@@ -5,7 +5,6 @@ import { FaSun, FaMoon } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
 import { useSelector } from "react-redux";
 
-//Named Export
 const Header = () => {
   const onlineStatus = useOnlineStatus();
 
