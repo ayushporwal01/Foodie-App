@@ -2,24 +2,24 @@ const OrderSummary = () => {
   return (
     <div className="flex flex-col items-center">
       <div className=" w-96 border dark:border-white dark:text-white">
-        <h1 className="text-2xl font-bold border-b uppercase p-3">
+        <h1 className="text-2xl font-semibold border-b uppercase p-3">
           Order Summary
         </h1>
         {/* SubTotal */}
         <div className="flex justify-between px-6 py-4">
-          <h3 className="text-xl font-bold uppercase">SubTotal</h3>
+          <h3 className="text-xl font-semibold uppercase">SubTotal</h3>
           <span className="text-xl">₹500</span>
         </div>
 
         {/* Taxes */}
         <div className="flex justify-between px-6 py-4">
-          <h3 className="text-xl font-bold uppercase">Taxes</h3>
+          <h3 className="text-xl font-semibold uppercase">Taxes</h3>
           <span className="text-lg">₹190</span>
         </div>
 
         {/* Total */}
         <div className="flex justify-between px-6 py-3 border-t">
-          <h3 className="text-xl font-bold uppercase">Total</h3>
+          <h3 className="text-xl font-semibold uppercase">Total</h3>
           <span className="text-lg">₹590</span>
         </div>
       </div>
