@@ -20,9 +20,7 @@ const Body = () => {
 
   const fetchData = async () => {
     try {
-      const data = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=22.7195687&lng=75.8577258&carousel=true&third_party_vendor=1"
-      );
+      const data = await fetch("/api/restaurants");
 
       const json = await data.json();
 
@@ -33,6 +31,7 @@ const Body = () => {
       setListOfRestaurant(restaurants);
       setFilteredRestaurant(restaurants);
     } catch (err) {
+      console.error("Error fetching restaurant data:", err);
       setError("Something went wrong while loading restaurants.");
     } finally {
       setLoading(false);
