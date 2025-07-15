@@ -1,6 +1,6 @@
 const OrderSummary = () => {
   return (
-    <div className="border-2 dark:border-white dark:text-white">
+    <div className=" w-96 border-2 dark:border-white dark:text-white">
       <h1 className="text-2xl font-bold border-b-2 uppercase p-3">
         Order Summary
       </h1>
