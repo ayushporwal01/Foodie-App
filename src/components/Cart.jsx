@@ -23,6 +23,7 @@ const Cart = () => {
       {cartItems.length > 0 ? (
         <div className="mx-auto md:w-6/12 p-5 mt-4">
           <ItemsList items={cartItems} showQuantityControls={true} />
+          <OrderSummary />
         </div>
       ) : (
         <div className="h-[calc(100vh-400px)] flex justify-center items-center">
