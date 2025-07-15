@@ -1,35 +1,30 @@
 const OrderSummary = () => {
   return (
-    <div className=" w-96 border-2 dark:border-white dark:text-white">
-      <h1 className="text-2xl font-bold border-b-2 uppercase p-3">
-        Order Summary
-      </h1>
-      {/* SubTotal */}
-      <div className="flex justify-between px-6 py-4">
-        <h3 className="text-xl font-bold uppercase">SubTotal</h3>
-        <span className="text-xl">₹5</span>
-      </div>
+    <div>
+      <div className=" w-96 border dark:border-white dark:text-white">
+        <h1 className="text-2xl font-bold border-b uppercase p-3">
+          Order Summary
+        </h1>
+        {/* SubTotal */}
+        <div className="flex justify-between px-6 py-4">
+          <h3 className="text-xl font-bold uppercase">SubTotal</h3>
+          <span className="text-xl">₹500</span>
+        </div>
 
-      {/* Shipping */}
-      <div className="flex justify-between px-6 py-4">
-        <h3 className="text-xl font-bold uppercase">Shipping</h3>
-        <span className="text-lg">Free</span>
-      </div>
+        {/* Taxes */}
+        <div className="flex justify-between px-6 py-4">
+          <h3 className="text-xl font-bold uppercase">Taxes</h3>
+          <span className="text-lg">₹190</span>
+        </div>
 
-      {/* Postage */}
-      <div className="flex justify-between px-6 py-4">
-        <h3 className="text-xl font-bold uppercase">Postage</h3>
-        <span className="text-lg">100</span>
+        {/* Total */}
+        <div className="flex justify-between px-6 py-3 border-t">
+          <h3 className="text-xl font-bold uppercase">Total</h3>
+          <span className="text-lg">₹590</span>
+        </div>
       </div>
-
-      {/* Total */}
-      <div className="flex justify-between px-6 py-3 border-t-2 border-b-2">
-        <h3 className="text-xl font-bold uppercase">Total</h3>
-        <span className="text-lg">105</span>
-      </div>
-
       {/* Checkout */}
-      <button className="w-full p-4 hover:bg-gray-200 text-xl font-bold uppercase transition-all duration-200 ease-in-out">
+      <button className="px-8 py-2 my-5 text-xl bg-black text-white dark:bg-white dark:text-black font-medium rounded-full transition-all duration-200 ease-in-out cursor-pointer">
         Checkout
       </button>
     </div>
