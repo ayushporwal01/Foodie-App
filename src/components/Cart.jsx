@@ -11,7 +11,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="min-h-screen text-center pt-32">
+    <div className="min-h-screen text-center pt-24 md:pt-32 pb-14 md:pb-0">
       <h1 className="text-4xl font-bold  text-[#555]">Cart</h1>
       <button
         className="mt-2 px-2 py-1 bg-black text-white dark:bg-white dark:text-black rounded-lg transition-all duration-200 ease-in-out cursor-pointer"
