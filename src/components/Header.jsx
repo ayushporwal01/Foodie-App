@@ -36,7 +36,7 @@ const Header = () => {
       {/* Logo */}
       <img
         className="logo w-[70px] md:w-[85px] md:ml-5 shrink-0"
-        src="/foodie2.png"
+        src="/foodie.png"
         alt="Food Logo"
       />
       <div className="nav-items flex items-center space-x-8 md:space-x-10 mr-3">
