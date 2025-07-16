@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 const ShimmerItem = () => (
   <div className="item-card">
     <div className="item-text-block">
@@ -12,10 +10,6 @@ const ShimmerItem = () => (
 );
 
 const MenuShimmer = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <div className="min-h-screen flex flex-col items-center">
       {/* Header */}

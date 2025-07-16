@@ -15,11 +15,6 @@ const Body = () => {
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
   const onlineStatus = useOnlineStatus();
 
-  //Scroll to top on mount
-   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   // Fetches restaurant data from API
   useEffect(() => {
     fetchData();

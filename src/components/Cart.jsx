@@ -1,5 +1,4 @@
 import {useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
 import ItemsList from "./itemList";
 import { clearCart } from "../utils/cartSlice";
 
@@ -10,10 +9,6 @@ const Cart = () => {
   const handleClearCart = () => {
     dispatch(clearCart());
   };
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <div className="min-h-screen text-center pt-24 md:pt-32 pb-14 md:pb-0">
