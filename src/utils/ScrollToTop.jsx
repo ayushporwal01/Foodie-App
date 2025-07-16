@@ -8,7 +8,7 @@ const ScrollToTop = () => {
     // Scroll to the top of the page on every route change
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "auto",
     });
   }, [pathname]); // Runs only when the path changes
 
