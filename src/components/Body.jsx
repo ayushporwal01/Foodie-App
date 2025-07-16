@@ -93,8 +93,8 @@ const Body = () => {
 
       {/* Restaurant Card or Shimmer */}
       {error ? (
-        <div className="flex justify-center items-center min-h-screen">
-          <h1 className="text-lg">{error}</h1>
+        <div className="min-h-[calc(100vh-18rem)] text-center flex justify-center items-center ">
+          <h1 className="text-lg md:text-xl text-red-500 p-2">{error}</h1>
         </div>
       ) : loading ? (
         <Shimmer />
