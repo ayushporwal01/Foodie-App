@@ -22,7 +22,7 @@ const Body = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("/api/restaurants");
+      const response = await fetch("/api/restaurant");
 
       const json = await response.json();
 
