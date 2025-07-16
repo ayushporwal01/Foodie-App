@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 const ShimmerItem = () => (
   <div className="item-card">
     <div className="item-text-block">
