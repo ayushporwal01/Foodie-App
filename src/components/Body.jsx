@@ -20,7 +20,6 @@ const Body = () => {
     window.scrollTo(0, 0);
   }, []);
 
-
   // Fetches restaurant data from API
   useEffect(() => {
     fetchData();
