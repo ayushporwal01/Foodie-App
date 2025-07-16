@@ -11,13 +11,13 @@ const Contact = () => {
             type="text"
             placeholder="Your Name"
             required
-            className="w-[70%] md:w-full border border-[#e08300] py-1.5 pl-2 rounded-lg focus:outline-none dark:placeholder-[#555] caret-[#ddd]"
+            className="w-[70%] md:w-full border border-[#e08300] py-1.5 pl-2 rounded-lg focus:outline-none dark:text-[#ddd] dark:placeholder-[#555] caret-[#ddd]"
           />
           <input
             type="email"
             placeholder="Your Email"
             required
-            className="w-[70%] md:w-full border border-[#e08300] py-1.5 pl-2 rounded-lg focus:outline-none dark:placeholder-[#555] caret-[#ddd]"
+            className="w-[70%] md:w-full border border-[#e08300] py-1.5 pl-2 rounded-lg focus:outline-none dark:text-[#ddd] dark:placeholder-[#555] caret-[#ddd]"
           />
 
           <textarea
@@ -25,7 +25,7 @@ const Contact = () => {
             rows="4"
             placeholder="Your Message..."
             required
-            className="w-[70%] md:w-full border border-[#e08300] py-5 pl-2 rounded-lg focus:outline-none dark:placeholder-[#555] caret-[#ddd]"
+            className="w-[70%] md:w-full border border-[#e08300] py-5 pl-2 rounded-lg focus:outline-none dark:text-[#ddd] dark:placeholder-[#555] caret-[#ddd]"
           ></textarea>
 
           <button
