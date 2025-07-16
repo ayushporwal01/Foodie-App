@@ -10,6 +10,10 @@ const ShimmerItem = () => (
 );
 
 const MenuShimmer = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col items-center">
       {/* Header */}
