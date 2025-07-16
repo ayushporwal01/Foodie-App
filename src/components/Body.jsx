@@ -94,7 +94,9 @@ const Body = () => {
 
       {/* Restaurant Card or Shimmer */}
       {error ? (
-        <div className="text-red-500">{error}</div>
+        <div className="flex justify-center items-center min-h-screen">
+          <h1 className="text-lg">{error}</h1>
+        </div>
       ) : loading ? (
         <Shimmer />
       ) : (
