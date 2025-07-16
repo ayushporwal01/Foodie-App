@@ -83,7 +83,7 @@ const Header = () => {
         <div className="-ml-3 md:-ml-5">
           <button
             onClick={toggleDarkMode}
-            className="text-xl transition-all duration-300 ease-in-out hover:text-[#e08300] mt-1"
+            className="text-xl transition-all duration-300 ease-in-out hover:text-[#e08300] mt-1 cursor-pointer"
           >
             <span
               className={`inline-block transform transition-all duration-300 ${
