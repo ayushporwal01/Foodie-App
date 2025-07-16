@@ -33,7 +33,6 @@ const Body = () => {
       setListOfRestaurant(restaurants);
       setFilteredRestaurant(restaurants);
     } catch (err) {
-      console.error("Error fetching restaurant data:", err);
       setError("Something went wrong while loading restaurants.");
     } finally {
       setLoading(false);
